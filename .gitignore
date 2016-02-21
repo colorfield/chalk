@@ -39,5 +39,5 @@ sites/simpletest
 *.idea
 
 # Ignore development modules
-modules/contrib/migrate_ui
+modules/contrib/migrate_upgrade
 modules/contrib/devel
