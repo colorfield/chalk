@@ -1,0 +1,10 @@
+global:
+  version: VERSION
+  css:
+    base:
+      css/blackboard.css: {}
+  js:
+    js/blackboard.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
