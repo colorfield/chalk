@@ -35,5 +35,8 @@ sites/simpletest
 # Ignore SimpleTest multi-site environment.
 # simpletest
 
-# IDE
+# Ignore IDE settings
 *.idea
+# Ignore development modules
+modules/contrib/migrate_ui
+moudles/contrib/devel
