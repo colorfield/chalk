@@ -1,0 +1,32 @@
+name: Bear Skin
+type: theme
+description: 'Bear Skin Starter Theme.'
+package: Custom
+# core: 8.x
+engine: twig
+screenshot: screenshot.png
+
+stylesheets-remove:
+  - core/modules/system/css/components/messages.theme.css
+  - core/modules/system/css/components/menu.theme.css
+
+libraries:
+  - bear_skin/global_scripts
+  - bear_skin/global_styling
+
+regions:
+  header: 'Header'
+  navigation: 'Navigation bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  breadcrumb: 'Breadcrumb'
+  footer: 'Footer'
+
+# Information added by Drupal.org packaging script on 2016-03-04
+version: '8.x-1.7'
+core: '8.x'
+project: 'bear_skin'
+datestamp: 1457123318
