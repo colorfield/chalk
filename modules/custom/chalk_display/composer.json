@@ -1,0 +1,14 @@
+{
+  "name": "drupal/chalk_display",
+  "type": "drupal-module",
+  "description": "Frontend custom code for Chalk.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/chalk_display",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/chalk_display",
+    "source": "http://cgit.drupalcode.org/chalk_display"
+  },
+  "require": { }
+}
