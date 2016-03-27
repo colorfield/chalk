@@ -8,6 +8,8 @@
 namespace Drupal\chalk_display\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Provides a 'ChalkMeetBlock' block.
@@ -18,14 +20,26 @@ use Drupal\Core\Block\BlockBase;
  * )
  */
 class ChalkMeetBlock extends BlockBase {
-
-
+  
   /**
    * {@inheritdoc}
    */
   public function build() {
     $build = [];
-    $build['chalk_meet_block']['#markup'] = 'Implement ChalkMeetBlock.';
+
+    //$path_alias = \Drupal::service('path.alias_manager')->getAliasByPath('');
+    //dpm("ALIAS = " . $path_alias);
+    $url = Url::fromRoute('contact.site_page');
+    $link = Link::fromTextAndUrl(t('Meet the Chalkers'), $url);
+    $link = $link->toRenderable();
+    $link['#attributes'] = array('class' => array('internal'));
+    $linkMarkup = render($link);
+
+    $output = [
+      '#theme' => 'chalk_display_meet',
+      '#meet_link' => $linkMarkup,
+    ];
+    $build['chalk_meet_block']['#markup'] = render($output);
 
     return $build;
   }
