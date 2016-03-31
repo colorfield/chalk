@@ -3,12 +3,13 @@
 }
 
 .site-footer {
-  background: $gray;
+  background: url(../images/footer_background.jpg);
+  background-size: cover;
+  border-top: 20px solid rgba(1, 1, 1, 0.7);
 }
 
 .site-footer {
   .region-footer {
-    padding: 30px 20px;
     @include breakpoint($breakpoint-to-max-width) {
       padding-left: 0;
       padding-right: 0;
@@ -17,6 +18,7 @@
 }
 
 #footer {
+  padding: 0;
   .block-menu {
     float: left;
     margin: 0 50px 0 0;
@@ -31,4 +33,23 @@
       }
     }
   }
+}
+
+.chalk-footer__sub {
+  background: rgba(1, 1, 1, 0.7);
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  ul {
+    font-size: 0;
+    padding: 10px 0;
+    li {
+      display: inline-block;
+      font-size: 16px;
+    }
+  }
+}
+
+.block-system-powered-by-block {
+  display: none;
 }

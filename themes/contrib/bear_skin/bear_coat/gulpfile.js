@@ -149,12 +149,13 @@ gulp.task('styleguidesass', function () {
 gulp.task('watch', function() {
   livereload.listen(4002);
 
-  gulp.watch("./styleguide/custom/style.scss", ['styleguidesass']);
-  gulp.watch("./css/bear_coat.css", ['styleguidesass']);
-  gulp.watch("./sass/**/*.scss", ['sass'], ['styleguide']);
-  gulp.watch("./js/*.js", ['scripts']);
-  gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);
-  gulp.watch("./templates/**/*.php").on('change', function() { livereload.reload() });
+  // gulp.watch("./styleguide/custom/style.scss", ['styleguidesass']);
+  gulp.watch("./css/bear_coat.css");
+  gulp.watch("./sass/**/*.scss", ['sass']);
+  // gulp.watch("./sass/**/*.scss", ['sass'], ['styleguide']);
+  // gulp.watch("./js/*.js", ['scripts']);
+  // gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);
+  // gulp.watch("./templates/**/*.php").on('change', function() { livereload.reload() });
 });
 
 gulp.task('default', ['sass', 'panels', 'watch']);
