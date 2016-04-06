@@ -19,6 +19,9 @@ sites/*/services*.yml
 sites/*/files
 sites/*/private
 
+# See https://www.drupal.org/node/2598914
+sites/development.services.yml
+
 # Ignore SimpleTest multi-site environment.
 sites/simpletest
 
