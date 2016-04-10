@@ -1,0 +1,9 @@
+chalk_display:
+  version: VERSION
+  js:
+    js/chalk_display.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/backbone

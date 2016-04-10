@@ -413,12 +413,12 @@ body:not(.semantic-ui) .wrapper .ui {
   font-family: "Helvetica Neue", Helvetica, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Droid Sans", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal; }
 
 header:not(.site-header) {
   color: #261D19;
-  font-family: "Droid Sans", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 120%;
   margin-bottom: 10px; }
 
@@ -544,6 +544,31 @@ i.icon, i.icons {
         #footer ul:not('.contextual-links') li a:focus {
           color: #728EAD; }
 
+.chalk-footer__top {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 180px 40px;
+  text-align: center; }
+  .chalk-footer__top h2 {
+    font-size: 54px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  .chalk-footer__top .contact-link, .chalk-footer__top .brochure-link {
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px; }
+  .chalk-footer__top .contact-link {
+    background: #ed4933;
+    border: 1px solid #ed4933;
+    margin-right: 20px; }
+  .chalk-footer__top .brochure-link {
+    background: rgba(1, 1, 1, 0.4);
+    border: 1px solid white; }
+
 .chalk-footer__sub {
   background: rgba(1, 1, 1, 0.7);
   text-align: center;
@@ -554,7 +579,35 @@ i.icon, i.icons {
     padding: 10px 0; }
     .chalk-footer__sub ul li {
       display: inline-block;
-      font-size: 16px; }
+      font-size: 16px;
+      margin-left: 20px; }
+      .chalk-footer__sub ul li:first-child {
+        margin-left: 0; }
+      .chalk-footer__sub ul li a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        text-indent: -9999px; }
+        .chalk-footer__sub ul li a.facebook {
+          background: url(../images/facebook-icon.png);
+          background: url(../images/facebook-icon.svg);
+          background-size: 30px; }
+        .chalk-footer__sub ul li a.ello {
+          background: url(../images/ello-icon.png);
+          background: url(../images/ello-icon.svg);
+          background-size: 30px; }
+        .chalk-footer__sub ul li a.pinterest {
+          background: url(../images/pinterest-icon.png);
+          background: url(../images/pinterest-icon.svg);
+          background-size: 30px; }
+        .chalk-footer__sub ul li a.instagram {
+          background: url(../images/instagram-icon.png);
+          background: url(../images/instagram-icon.svg);
+          background-size: 30px; }
+        .chalk-footer__sub ul li a.youtube {
+          background: url(../images/youtube-icon.png);
+          background: url(../images/youtube-icon.svg);
+          background-size: 30px; }
 
 .block-system-powered-by-block {
   display: none; }
@@ -689,6 +742,54 @@ figure {
     padding: .5em 0;
     font-size: 90%;
     font-style: italic; }
+
+.chalk-meet-background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
+  opacity: .8; }
+  .chalk-meet-background .background-video {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%; }
+  .chalk-meet-background .background-video iframe {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 101%; }
+
+.chalk-meet {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  margin-top: -45px; }
+  .chalk-meet a {
+    background: rgba(1, 1, 1, 0.4);
+    border: 2px solid white;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    line-height: 36px; }
+    .chalk-meet a span {
+      text-transform: none;
+      font-weight: 100;
+      font-size: 28px;
+      display: block; }
 
 body.has-sidr header nav {
   position: absolute !important;
@@ -1030,6 +1131,9 @@ nav.ui.breadcrumb {
   padding-bottom: 30px;
   padding: 0; }
 
+#content {
+  padding: 0; }
+
 .slides li {
   position: relative; }
   .slides li .views-field-field-artist {
@@ -1048,7 +1152,7 @@ nav.ui.breadcrumb {
         padding-top: 480px;
         position: absolute;
         top: 0;
-        font-size: 38px;
+        font-size: 34px;
         text-transform: uppercase;
         color: white;
         font-weight: bold;
@@ -1065,14 +1169,148 @@ nav.ui.breadcrumb {
 .flex-control-paging {
   display: none; }
 
-.flex-direction-nav a:before {
-  font-size: 30px; }
+.flexslider:hover .flex-direction-nav .flex-next {
+  right: 0; }
+
+.flexslider:hover .flex-direction-nav .flex-prev {
+  left: 0; }
+
+.flex-direction-nav a {
+  padding: 30px;
+  background: rgba(1, 1, 1, 0.4);
+  opacity: 1; }
+  .flex-direction-nav a:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -22px;
+    margin-left: -10px;
+    font-size: 30px;
+    color: white; }
+
+.site-header__name h1 {
+  text-transform: uppercase;
+  font-weight: bold; }
 
 .block-page-title-block, .block-system-main-block, .block-views-blockevents-block-1 {
   max-width: 1180px;
   width: 100%;
   margin: 0 auto;
   padding: 0 40px; }
+
+.region-content .block-system-branding-block {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px; }
+  .region-content .block-system-branding-block h1 {
+    font-size: 54px;
+    margin-bottom: 0; }
+  .region-content .block-system-branding-block h2 {
+    font-size: 50px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    margin-top: 0; }
+
+.region-content .node--view-mode-full header {
+  display: none; }
+
+.region-content .node--view-mode-full p {
+  margin-top: 50px;
+  font-size: 18px; }
+
+.block-views-blockevents-block-1 h2 {
+  padding-top: 80px;
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 54px;
+  text-transform: uppercase; }
+
+.more-link {
+  margin: 40px 0; }
+  .more-link a {
+    border: 1px solid #261D19;
+    font-weight: bold;
+    color: #261D19;
+    padding: 10px 20px; }
+
+.events-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0; }
+  .events-list ul li:not(.node-readmore) {
+    font-size: 16px;
+    position: relative;
+    max-width: 380px;
+    width: 31.333%;
+    margin-left: 3%;
+    display: inline-block;
+    background: #261D19;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+    .events-list ul li:not(.node-readmore):after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 10px;
+      left: 0;
+      width: 100%;
+      background: white;
+      z-index: 100;
+      transition: height .3s; }
+    .events-list ul li:not(.node-readmore):first-child {
+      margin-left: 0; }
+    .events-list ul li:not(.node-readmore):hover:after {
+      height: 80px;
+      transition: height .3s; }
+    .events-list ul li:not(.node-readmore):hover .field_date {
+      transition: left .2s .3s;
+      left: 0; }
+    .events-list ul li:not(.node-readmore):hover .links {
+      transition: left .3s .3s, background-position .6s .3s;
+      left: 0;
+      background-position: right center; }
+    .events-list ul li:not(.node-readmore) header {
+      margin-bottom: 0; }
+    .events-list ul li:not(.node-readmore) h2 {
+      position: absolute;
+      font-size: 24px;
+      padding: 20px 20px 0; }
+      .events-list ul li:not(.node-readmore) h2 a {
+        color: white; }
+    .events-list ul li:not(.node-readmore) .field_date {
+      position: absolute;
+      padding: 0 20px 0;
+      bottom: 40px;
+      left: -100%;
+      color: #261D19;
+      z-index: 200; }
+    .events-list ul li:not(.node-readmore) .links {
+      position: absolute;
+      padding: 0 40px 0 20px;
+      bottom: 20px;
+      left: -100%;
+      z-index: 200;
+      background: url(../images/more-icon.png) no-repeat;
+      background: url(../images/more-icon.svg) no-repeat;
+      background-position: 400px center;
+      background-size: 20px; }
+      .events-list ul li:not(.node-readmore) .links .node-readmore {
+        display: inline-block;
+        width: 100%;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold; }
+        .events-list ul li:not(.node-readmore) .links .node-readmore a {
+          color: #261D19; }
+
+.block-chalk-meet-block {
+  position: relative;
+  height: 100vh; }
 
 .panel-pane {
   margin-bottom: 30px; }

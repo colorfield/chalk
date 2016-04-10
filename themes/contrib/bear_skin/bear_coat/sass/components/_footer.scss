@@ -34,7 +34,35 @@
     }
   }
 }
-
+.chalk-footer__top {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 180px 40px;
+  text-align: center;
+  h2 {
+    font-size: 54px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $header-font-family;
+  }
+  .contact-link, .brochure-link {
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  .contact-link {
+    background: #ed4933;
+    border: 1px solid #ed4933;
+    margin-right: 20px;
+  }
+  .brochure-link {
+    background: rgba(1, 1, 1, 0.4);
+    border: 1px solid white;
+  }
+}
 .chalk-footer__sub {
   background: rgba(1, 1, 1, 0.7);
   text-align: center;
@@ -46,6 +74,41 @@
     li {
       display: inline-block;
       font-size: 16px;
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        text-indent: -9999px;
+        &.facebook {
+          background: url(../images/facebook-icon.png);
+          background: url(../images/facebook-icon.svg);
+          background-size: 30px;
+        }
+        &.ello {
+          background: url(../images/ello-icon.png);
+          background: url(../images/ello-icon.svg);
+          background-size: 30px;
+        }
+        &.pinterest {
+          background: url(../images/pinterest-icon.png);
+          background: url(../images/pinterest-icon.svg);
+          background-size: 30px;
+        }
+        &.instagram {
+          background: url(../images/instagram-icon.png);
+          background: url(../images/instagram-icon.svg);
+          background-size: 30px;
+        }
+        &.youtube {
+          background: url(../images/youtube-icon.png);
+          background: url(../images/youtube-icon.svg);
+          background-size: 30px;
+        }
+      }
     }
   }
 }

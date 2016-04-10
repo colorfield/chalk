@@ -27,6 +27,8 @@ function chalk_display_theme($existing, $type, $theme, $path)
     'chalk_display_footer' => array(
       'variables' => array(
         'contact' => null,
+        'contact_link' => null,
+        'brochure_link' => null,
         'social_links' => null,
         'credits' => null,
       ),

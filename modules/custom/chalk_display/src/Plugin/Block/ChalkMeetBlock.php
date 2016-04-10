@@ -20,7 +20,7 @@ use Drupal\Core\Link;
  * )
  */
 class ChalkMeetBlock extends BlockBase {
-  
+
   /**
    * {@inheritdoc}
    */
@@ -30,7 +30,7 @@ class ChalkMeetBlock extends BlockBase {
     //$path_alias = \Drupal::service('path.alias_manager')->getAliasByPath('');
     //dpm("ALIAS = " . $path_alias);
     $url = Url::fromRoute('contact.site_page');
-    $link = Link::fromTextAndUrl(t('Meet the Chalkers'), $url);
+    $link = Link::fromTextAndUrl(t('Meet the Chalkers<span>Learn more about us</span>'), $url);
     $link = $link->toRenderable();
     $link['#attributes'] = array('class' => array('internal'));
     $linkMarkup = render($link);
@@ -38,6 +38,12 @@ class ChalkMeetBlock extends BlockBase {
     $output = [
       '#theme' => 'chalk_display_meet',
       '#meet_link' => $linkMarkup,
+      '#video' => '',
+      '#attached' => array(
+        'library' => array(
+          'chalk_display/chalk_display',
+        ),
+      ),
     ];
     $build['chalk_meet_block']['#markup'] = render($output);
 

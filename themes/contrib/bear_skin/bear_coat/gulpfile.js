@@ -153,9 +153,9 @@ gulp.task('watch', function() {
   gulp.watch("./css/bear_coat.css");
   gulp.watch("./sass/**/*.scss", ['sass']);
   // gulp.watch("./sass/**/*.scss", ['sass'], ['styleguide']);
-  // gulp.watch("./js/*.js", ['scripts']);
+  gulp.watch("./js/*.js", ['scripts']);
   // gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);
-  // gulp.watch("./templates/**/*.php").on('change', function() { livereload.reload() });
+  gulp.watch("./templates/**/*.php").on('change', function() { livereload.reload() });
 });
 
 gulp.task('default', ['sass', 'panels', 'watch']);

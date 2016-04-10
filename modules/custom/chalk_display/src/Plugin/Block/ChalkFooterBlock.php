@@ -42,6 +42,18 @@ class ChalkFooterBlock extends BlockBase {
       $items[] = render($link);
     }
 
+    $contacturl = Url::fromRoute('contact.site_page');
+    $contactlink = Link::fromTextAndUrl(t('get involved !'), $contacturl);
+    $contactlink = $contactlink->toRenderable();
+    $contactlink['#attributes'] = array('class' => array('internal contact-link'));
+    $contactlinkMarkup = render($contactlink);
+
+    $brochureurl = Url::fromRoute('contact.site_page');
+    $brochurelink = Link::fromTextAndUrl(t('Learn more'), $brochureurl);
+    $brochurelink = $brochurelink->toRenderable();
+    $brochurelink['#attributes'] = array('class' => array('internal brochure-link'));
+    $brochurelinkMarkup = render($brochurelink);
+
     $build['social_links'] = array(
         '#theme' => 'item_list',
         '#items' => $items,
@@ -57,6 +69,7 @@ class ChalkFooterBlock extends BlockBase {
   private function contactMarkup() {
     $output = '';
     $output .= t('Contact us');
+
     return $output;
   }
 
@@ -78,6 +91,8 @@ class ChalkFooterBlock extends BlockBase {
     $output = [
         '#theme' => 'chalk_display_footer',
         '#contact' => $this->contactMarkup(),
+        '#contact_link' => $contactlinkMarkup,
+        '#brochure_link' => $brochurelinkMarkup,
         '#social_links' => render($this->socialLinksList()),
         '#credits' => $this->creditsMarkup(),
     ];
