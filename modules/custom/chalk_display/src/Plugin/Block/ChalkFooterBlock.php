@@ -56,8 +56,7 @@ class ChalkFooterBlock extends BlockBase {
    */
   private function contactMarkup() {
     $output = '';
-    $output .= t('Contact us');
-
+    $output .= t('Want more?');
     return $output;
   }
 
@@ -85,7 +84,7 @@ class ChalkFooterBlock extends BlockBase {
     $contactLink['#attributes'] = array('class' => array('contact-link', 'internal'));
 
     $brochureUrl = Url::fromUri('internal:/sites/default/files/brochures/chalk-brochure-2016.pdf');
-    $brochureLink = Link::fromTextAndUrl(t('Learn more'), $brochureUrl);
+    $brochureLink = Link::fromTextAndUrl(t('Get our brochure [pdf]'), $brochureUrl);
     $brochureLink = $brochureLink->toRenderable();
     $brochureLink['#attributes'] = array('class' => array('brochure-link', 'internal'));
 
