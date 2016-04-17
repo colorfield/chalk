@@ -29,7 +29,10 @@ class ChalkMeetBlock extends BlockBase {
 
     //$path_alias = \Drupal::service('path.alias_manager')->getAliasByPath('');
     //dpm("ALIAS = " . $path_alias);
-    $url = Url::fromRoute('contact.site_page');
+    //$url = Url::fromRoute('contact.site_page');
+
+    // @todo set internal paths in config
+    $url = Url::fromUri('internal:/artists');
     $link = Link::fromTextAndUrl(t('Meet the Chalkers<span>Learn more about us</span>'), $url);
     $link = $link->toRenderable();
     $link['#attributes'] = array('class' => array('internal'));

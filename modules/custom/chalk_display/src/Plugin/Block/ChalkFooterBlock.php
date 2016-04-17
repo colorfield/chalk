@@ -42,18 +42,6 @@ class ChalkFooterBlock extends BlockBase {
       $items[] = render($link);
     }
 
-    $contacturl = Url::fromRoute('contact.site_page');
-    $contactlink = Link::fromTextAndUrl(t('get involved !'), $contacturl);
-    $contactlink = $contactlink->toRenderable();
-    $contactlink['#attributes'] = array('class' => array('internal contact-link'));
-    $contactlinkMarkup = render($contactlink);
-
-    $brochureurl = Url::fromRoute('contact.site_page');
-    $brochurelink = Link::fromTextAndUrl(t('Learn more'), $brochureurl);
-    $brochurelink = $brochurelink->toRenderable();
-    $brochurelink['#attributes'] = array('class' => array('internal brochure-link'));
-    $brochurelinkMarkup = render($brochurelink);
-
     $build['social_links'] = array(
         '#theme' => 'item_list',
         '#items' => $items,
@@ -88,11 +76,24 @@ class ChalkFooterBlock extends BlockBase {
    */
   public function build() {
     $build = [];
+
+    // @todo set internal paths in config
+    // @todo refactoring needed
+    $contactUrl = Url::fromUri('internal:/get-involved');
+    $contactLink = Link::fromTextAndUrl(t('Get involved !'), $contactUrl);
+    $contactLink = $contactLink->toRenderable();
+    $contactLink['#attributes'] = array('class' => array('contact-link'));
+
+    $brochureUrl = Url::fromUri('internal:/sites/default/files/brochures/chalk-brochure-2016.pdf');
+    $brochureLink = Link::fromTextAndUrl(t('Learn more'), $brochureUrl);
+    $brochureLink = $brochureLink->toRenderable();
+    $brochurelink['#attributes'] = array('class' => array('brochure-link'));
+
     $output = [
         '#theme' => 'chalk_display_footer',
         '#contact' => $this->contactMarkup(),
-        '#contact_link' => $contactlinkMarkup,
-        '#brochure_link' => $brochurelinkMarkup,
+        '#contact_link' => render($contactLink),
+        '#brochure_link' => render($brochureLink),
         '#social_links' => render($this->socialLinksList()),
         '#credits' => $this->creditsMarkup(),
     ];

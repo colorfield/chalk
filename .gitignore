@@ -44,3 +44,6 @@ sites/simpletest
 # Ignore development modules
 modules/contrib/migrate_upgrade
 modules/contrib/devel
+
+# Ignore OS generated files
+.DS_Store
