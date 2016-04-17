@@ -82,12 +82,12 @@ class ChalkFooterBlock extends BlockBase {
     $contactUrl = Url::fromUri('internal:/get-involved');
     $contactLink = Link::fromTextAndUrl(t('Get involved !'), $contactUrl);
     $contactLink = $contactLink->toRenderable();
-    $contactLink['#attributes'] = array('class' => array('contact-link'));
+    $contactLink['#attributes'] = array('class' => array('contact-link', 'internal'));
 
     $brochureUrl = Url::fromUri('internal:/sites/default/files/brochures/chalk-brochure-2016.pdf');
     $brochureLink = Link::fromTextAndUrl(t('Learn more'), $brochureUrl);
     $brochureLink = $brochureLink->toRenderable();
-    $brochurelink['#attributes'] = array('class' => array('brochure-link'));
+    $brochureLink['#attributes'] = array('class' => array('brochure-link', 'internal'));
 
     $output = [
         '#theme' => 'chalk_display_footer',
