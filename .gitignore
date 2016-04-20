@@ -7,8 +7,11 @@
 # Because .gitignore can be specific to your site, this file has a different
 # name; updating Drupal core will not override your custom .gitignore file.
 
-# Ignore core and vendor when managing dependencies with Composer.
-core
+# Ignore core when managing all of a project's dependencies with Composer
+# including Drupal core.
+# core
+
+# Core's dependencies are managed with Composer.
 vendor
 
 # Ignore configuration files that may contain sensitive information.
@@ -18,9 +21,6 @@ sites/*/services*.yml
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-
-# See https://www.drupal.org/node/2598914
-sites/development.services.yml
 
 # Ignore SimpleTest multi-site environment.
 sites/simpletest
@@ -37,6 +37,9 @@ sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
+
+# See https://www.drupal.org/node/2598914
+sites/development.services.yml
 
 # Ignore IDE settings
 *.idea
