@@ -1400,6 +1400,12 @@ nav.ui.breadcrumb {
   position: relative;
   height: 100vh; }
 
+.block-views-blockboards-by-artist-block-1 {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px; }
+
 .panel-pane {
   margin-bottom: 30px; }
 
