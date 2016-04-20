@@ -1,1 +1,12 @@
-
+@keyframes blurIn {
+    0%   {
+      filter: blur(8px);
+      opacity: 0.25;
+      visibility: hidden;
+    }
+    100% {
+      filter: blur(0);
+      opacity: 1;
+      visibility: visible;;
+    }
+}

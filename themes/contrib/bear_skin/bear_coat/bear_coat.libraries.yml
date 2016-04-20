@@ -1,6 +1,7 @@
 global_scripts:
   version: 1.x
   js:
+    js/grids.min.js: {}
     js/scripts.js: {}
 
 global_styling:

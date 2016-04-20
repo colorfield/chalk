@@ -1,5 +1,5 @@
-$header-height: 105px;
-$header-compressed-height: 55px;
+$header-height: 75px;
+$header-compressed-height: 70px;
 
 // Our Mixin for compressed header (mobile and scroll)
 @mixin compressHeader {
@@ -28,7 +28,7 @@ $header-compressed-height: 55px;
   filter: url(../images/shadow.svg#drop-shadow);
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
   background: white;
-  z-index: 99;
+  z-index: 300;
   transition: all .3s ease-in-out;
   @include compressHeader;
   @include breakpoint($breakpoint-medium-width) {
@@ -63,6 +63,8 @@ $header-compressed-height: 55px;
 }
 
 .site-header {
+  padding-left: 0;
+  padding-right: 0;
   .region {
     position: relative;
   }
@@ -70,11 +72,13 @@ $header-compressed-height: 55px;
     text-align: center;
     .block-system-branding-block {
       display: inline-block;
-      position: absolute;
-      left: 50%;
-      margin-left: -60px;
-      transition: margin .3s ease-in-out;
       z-index: 200;
+      @include breakpoint($breakpoint-medium-width) {
+        position: absolute;
+        left: 50%;
+        margin-left: -60px;
+        transition: margin .3s ease-in-out;
+      }
     }
     .site-header__logo {
       display: inline-block;
@@ -93,21 +97,47 @@ $header-compressed-height: 55px;
   }
   .region-navigation {
     transition: all .3s ease-in-out;
-    display: inline-block;
-    width: 100%;
+    @include breakpoint($breakpoint-medium-width) {
+      display: inline-block;
+      width: 100%;
+    }
     .contextual-region {
       width: 100%;
       text-align: center;
       li {
-        width: 130px;
-        display: inline-block;
         transition: padding .3s ease-in-out;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include breakpoint($breakpoint-medium-width) {
+          width: 130px;
+          display: inline-block;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        a {
+          transition: .3s all;
+          font-size: 32px;
+          text-transform: uppercase;
+          @include breakpoint($breakpoint-medium-width) {
+            font-size: 16px;
+          }
+          &.is-active, &.hover {
+            color: $red;
+            background: none;
+            transition: .3s all;
+          }
+        }
       }
       li:nth-of-type(2) {
-        margin-right: 60px;
+        @include breakpoint($breakpoint-medium-width) {
+          margin-right: 60px;
+        }
       }
       li:nth-of-type(3) {
-        margin-left: 60px;
+        @include breakpoint($breakpoint-medium-width) {
+          margin-left: 60px;
+        }
       }
     }
   }
@@ -171,7 +201,9 @@ $header-compressed-height: 55px;
 
 .wrapper--header.compressed {
   .block-system-branding-block {
-    margin-left: -50px;
     transition: margin .3s ease-in-out;
+    @include breakpoint($breakpoint-medium-width) {
+      margin-left: -50px;
+    }
   }
 }

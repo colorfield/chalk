@@ -33,6 +33,10 @@
         }
       });
 
+      var $elements = $('.artists-list ul li.artist');
+      var columns = $elements.detectGridColumns();
+      $elements.responsiveEqualHeightGrid();
+
       //addclass to search wrapper on focus
       var $searchForm = $('#search-block-form', context);
       $searchForm
