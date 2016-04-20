@@ -1405,6 +1405,11 @@ nav.ui.breadcrumb {
   width: 100%;
   margin: 0 auto;
   padding: 0 40px; }
+  .block-views-blockboards-by-artist-block-1 h2 {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 54px;
+    text-transform: uppercase; }
 
 .panel-pane {
   margin-bottom: 30px; }
