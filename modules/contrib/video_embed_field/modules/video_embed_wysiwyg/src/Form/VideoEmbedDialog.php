@@ -1,13 +1,8 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\video_embed_wysiwyg\Form\VideoEmbedDialog.
- */
-
 namespace Drupal\video_embed_wysiwyg\Form;
 
-use Drupal\Component\Plugin\PluginManagerInterface;
+use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\CloseModalDialogCommand;
 use Drupal\Core\Ajax\HtmlCommand;
@@ -16,12 +11,13 @@ use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\RendererInterface;
 use Drupal\editor\Ajax\EditorDialogSave;
-use Drupal\field\Entity\FieldConfig;
+use Drupal\editor\Entity\Editor;
 use Drupal\filter\Entity\FilterFormat;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\video_embed_field\Plugin\Field\FieldFormatter\Video;
 use Drupal\video_embed_field\Plugin\Field\FieldWidget\VideoTextfield;
 use Drupal\video_embed_field\ProviderManager;
+use Drupal\video_embed_field\ProviderPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -60,8 +56,22 @@ class VideoEmbedDialog extends FormBase {
       '#default_value' => $this->getUserInput($form_state, 'video_url'),
     ];
 
+    // If no settings are found, use the defaults configured in the filter
+    // formats interface.
+    $settings = $this->getUserInput($form_state, 'settings');
+    if (empty($settings) && $editor = Editor::load($filter_format->id())) {
+      $editor_settings = $editor->getSettings();
+      $plugin_settings = NestedArray::getValue($editor_settings, [
+        'plugins',
+        'video_embed',
+        'defaults',
+        'children',
+      ]);
+      $settings = $plugin_settings ? $plugin_settings : [];
+    }
+
     // Create a settings form from the existing video formatter.
-    $form['settings'] = $this->getVideoFormatterInstance($this->getUserInput($form_state, 'settings'))->settingsForm([], new FormState());;
+    $form['settings'] = Video::mockInstance($settings)->settingsForm([], new FormState());;
     $form['settings']['#type'] = 'fieldset';
     $form['settings']['#title'] = $this->t('Settings');
 
@@ -79,32 +89,6 @@ class VideoEmbedDialog extends FormBase {
       ],
     ];
     return $form;
-  }
-
-  /**
-   * Get an instance of the Video field formatter plugin.
-   *
-   * This is useful because there is a lot of overlap to the configuration and
-   * display of a video in a WYSIWYG and configuring a field formatter. We
-   * get an instance of the plugin with our own WYSIWYG settings shimmed in,
-   * as well as a fake field_definition because one in this context doesn't
-   * exist. This allows us to reuse aspects such as the form and settings
-   * summary for the WYSIWYG integration.
-   *
-   * @param array $settings
-   *   The settings to pass to the plugin.
-   *
-   * @return \Drupal\Core\Field\FormatterInterface
-   *   The formatter plugin.
-   */
-  protected function getVideoFormatterInstance($settings = []) {
-    return $this->formatterManager->createInstance('video_embed_field_video', [
-      'settings' => !empty($settings) ? $settings : [],
-      'third_party_settings' => [],
-      'field_definition' => new FieldConfig(['field_name' => 'mock', 'entity_type' => 'mock', 'bundle' => 'mock']),
-      'label' => '',
-      'view_mode' => '',
-    ]);
   }
 
   /**
@@ -133,11 +117,7 @@ class VideoEmbedDialog extends FormBase {
    * @return array
    *   An array of values sent to the client for use in the WYSIWYG.
    */
-  protected function getClientValues(FormStateInterface $form_state, $provider) {
-    // @todo Render the thumbnail to download it from the remote. Consider
-    // making the download method public. https://www.drupal.org/node/2687077
-    $provider->renderThumbnail(FALSE, FALSE);
-
+  protected function getClientValues(FormStateInterface $form_state, ProviderPluginInterface $provider) {
     // All settings from the field formatter exist in the form and are relevant
     // for the rendering of the video.
     $video_formatter_settings = Video::defaultSettings();
@@ -145,11 +125,14 @@ class VideoEmbedDialog extends FormBase {
       $video_formatter_settings[$key] = $form_state->getValue($key);
     }
 
+    $provider->downloadThumbnail();
+    $thumbnail_preview = ImageStyle::load('video_embed_wysiwyg_preview')->buildUrl($provider->getLocalThumbnailUri());
+    $thumbnail_preview_parts = parse_url($thumbnail_preview);
     return [
-      'preview_thumbnail' => ImageStyle::load('video_embed_wysiwyg_preview')->buildUrl($provider->getLocalThumbnailUri()),
+      'preview_thumbnail' => $thumbnail_preview_parts['path'] . (!empty($thumbnail_preview_parts['query']) ? '?' : '') . $thumbnail_preview_parts['query'],
       'video_url' => $form_state->getValue('video_url'),
       'settings' => $video_formatter_settings,
-      'settings_summary' => $this->getVideoFormatterInstance($video_formatter_settings)->settingsSummary(),
+      'settings_summary' => Video::mockInstance($video_formatter_settings)->settingsSummary(),
     ];
   }
 
@@ -222,20 +205,17 @@ class VideoEmbedDialog extends FormBase {
    *   The video provider plugin manager.
    * @param \Drupal\Core\Render\RendererInterface $renderer
    *   The renderer.
-   * @param \Drupal\Component\Plugin\PluginManagerInterface $formatter_manager
-   *   The field formatter manager.
    */
-  public function __construct(ProviderManager $provider_manager, RendererInterface $renderer, PluginManagerInterface $formatter_manager) {
+  public function __construct(ProviderManager $provider_manager, RendererInterface $renderer) {
     $this->providerManager = $provider_manager;
     $this->render = $renderer;
-    $this->formatterManager = $formatter_manager;
   }
 
   /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    return new static($container->get('video_embed_field.provider_manager'), $container->get('renderer'), $container->get('plugin.manager.field.formatter'));
+    return new static($container->get('video_embed_field.provider_manager'), $container->get('renderer'));
   }
 
 }

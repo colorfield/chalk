@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\video_embed_field\VideoProviderManagerInterface.
- */
-
 namespace Drupal\video_embed_field;
 
 /**
@@ -27,6 +22,7 @@ interface ProviderManagerInterface {
    *   An array of options from a form API submission.
    *
    * @return array
+   *   An array of plugin definitions.
    */
   public function loadDefinitionsFromOptionList($options);
 
@@ -35,7 +31,7 @@ interface ProviderManagerInterface {
    *
    * @param array $definitions
    *   A list of definitions to test against.
-   * @param $user_input
+   * @param string $user_input
    *   The user input to test against the plugins.
    *
    * @return \Drupal\video_embed_field\ProviderPluginInterface|bool
@@ -53,5 +49,16 @@ interface ProviderManagerInterface {
    *   The loaded plugin.
    */
   public function loadProviderFromInput($input);
+
+  /**
+   * Load a plugin definition from an input.
+   *
+   * @param string $input
+   *   An input string.
+   *
+   * @return array
+   *   A plugin definition.
+   */
+  public function loadDefinitionFromInput($input);
 
 }
