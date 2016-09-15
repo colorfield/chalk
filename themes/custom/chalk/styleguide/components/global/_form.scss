@@ -1,0 +1,51 @@
+// @file
+// Forms
+
+// Text format
+.js-text-format-wrapper{
+  & > .form-item-text-format-value{
+    margin-bottom: 0;
+
+    // @todo consistent class
+    > div{
+      line-height: 0;
+    }
+  }
+
+  .filter-wrapper{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  textarea{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 100%;
+  }
+}
+
+.filter-help,
+.filter-guidelines{
+  font-size: $font-size-md;
+}
+
+// Details
+// @todo component e.g. c-panel that could be used for <details> in vertical tabs and form details open/closed with customized header and status open/closed (eg color)
+// also review if it could be applied to fieldsets (see bootstrap-panel)
+details{
+  border-radius: 3px;
+  border:1px solid $form-border-color;
+  margin: rhythm(1/2) 0 rhythm(1);
+  padding: rhythm(1/2) $gutter;
+  position: relative;
+}
+
+.detail__summary{
+  cursor: pointer;
+  outline: none;
+}
+
+.detail__description{
+  font-style: italic;
+  margin-top: 0;
+}

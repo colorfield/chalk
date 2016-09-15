@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+// Import bourbon framework for mixin, vars, functions helpers
+@import "bourbon";
+
+// Import custom grid settings -> should be before Neat
+@import "base/grid-settings";
+
+// Import Neat grid system (based on Bourbon)
+@import "neat";
+
+// Global variables
+// Add support for lt-ie9 (lower than ie9 browsers) and no-mq browsers
+$ie: true;
+$no-mq: true;
+
+
+//
+// HTML elements
+//
+// Order is important
+//
+
+// All variables for layout, colors and fonts
+@import 'base/variables';
+
+// All helpers functions: use them!
+@import 'base/functions';
+
+// All helpers mixins: use them!
+@import 'base/mixins';
+
+// Css writing start here. "Normalize.css makes browsers render all elements more consistently and in line with modern standards."
+@import 'base/normalize';
+
+//
+// Html elements
+//
+// Base tags
+//
+// Styleguide 1.0
+@import 'base/html-elements';
+
+//
+// Typography
+//
+// Custom elements styling
+//
+// Styleguide 4.0
+@import 'base/typography';
+
+// All reusable @extend and classes
+@import 'base/extendables';
+
+// Helper classes
+@import 'base/helper-classes';
+
+//
+// Layout
+//
+// Grid and layout helpers
+// Based on Neat
+//
+// Styleguide 7.0
+
+// Our global grid system helpers. Feel free to make your own or don't use it.
+// You can also only use Neat if you want only "semantic" grid system: don't rely on css classes for the layout
+@import 'layout/grid';
+
+// Global layout styles goes here
+@import 'layout/page';
+
+
+//
+// Form elements
+//
+// @todo or better use styleguide module (drupal)
+//
+// Styleguide 5.0
+
+//
+// Drupal Components
+//
+// Drupal default components
+//
+// Styleguide 8.0
+
+//
+// Custom Components
+//
+// Project related components
+//
+// Styleguide 9.0
+
+//
+//  Import system & custom components
+//
+// All your custom styles goes inside components.
+// Exemple: you have to style a new teaser, create a file called _teaser-big.scss
+// Feel free to sort into new subfolders like components/custom/statistics/
+//
+// Globbing will automatically import partials in the 'components' directory
+// This means you just have to create the new files in components/custom/*
+// They will be imported in alphabetical order
+@import "components/**/*.scss";

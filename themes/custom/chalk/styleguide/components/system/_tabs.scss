@@ -1,0 +1,40 @@
+// @file
+
+// Tabs.
+//
+// Markup:
+// <ul class="{$modifiers} nav">
+//   <li class="nav__item is-active">
+//     <a href="#" data-drupal-link-system-path="#" class="is-active">View<span class="visually-hidden">(active tab)</span>
+//     </a>
+//   </li>
+//   <li class="nav__item">
+//     <a href="#" data-drupal-link-system-path="#">Edit</a>
+//   </li>
+//   <li class="nav__item">
+//     <a href="#" data-drupal-link-system-path="#">Delete</a>
+//   </li>
+// </ul>
+//
+// .tabs--primary    - Pillbox nav style.
+// .tabs--secondary    - Tabs style.
+//
+// Styleguide 8.4
+
+.tabs--primary{
+  @extend %nav--inline;
+  @extend %nav--tabs;
+
+  @media print {
+    display: none;
+  }
+}
+
+.tabs--secondary{
+  @extend %nav--inline;
+  @extend %nav--pillbox;
+
+  @media print {
+    display: none;
+  }
+}

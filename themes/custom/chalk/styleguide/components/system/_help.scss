@@ -1,0 +1,16 @@
+// @file
+// More Help
+// @todo move this icon?
+// see .filter-help too
+
+.icon-help{
+  &:before{
+    background: url(../images/core/help.png) no-repeat center;
+    content: '';
+    display: inline-block;
+    height: 16px;
+    margin-right: rem(5);
+    vertical-align: middle;
+    width: 16px;
+  }
+}

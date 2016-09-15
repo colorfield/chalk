@@ -1,0 +1,181 @@
+a.pseudo-class-active,
+a.pseudo-class-hover {
+  outline: 0;
+}
+
+a.pseudo-class-hover,
+a.pseudo-class-focus {
+  color: #88c3d9;
+}
+
+a.pseudo-class-hover,
+a.pseudo-class-visited {
+  text-decoration: none;
+}
+
+abbr.pseudo-class-hover {
+  cursor: help;
+}
+
+.button.pseudo-class-active,
+.button--primary.pseudo-class-active {
+  transform: translateY(1px);
+}
+
+.button.pseudo-class-disabled,
+.button--primary.pseudo-class-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button.pseudo-class-hover {
+  background-color: #ababab;
+  color: #404040;
+}
+
+.button.pseudo-class-focus {
+  box-shadow: #bfbfbf 0 0 4px;
+  color: #404040;
+  outline: 0;
+}
+
+.button--primary.pseudo-class-hover {
+  background-color: #429fc3;
+  color: #fff;
+}
+
+.button--primary.pseudo-class-focus {
+  box-shadow: #61afcd 0 0 4px;
+  color: #fff;
+  outline: 0;
+}
+
+.slides li .views-field-field-artist .field-content a.pseudo-class-hover {
+  animation: blurIn 1s;
+  opacity: 1;
+}
+
+.flexslider.pseudo-class-hover .flex-direction-nav .flex-next {
+  right: 0;
+}
+
+.flexslider.pseudo-class-hover .flex-direction-nav .flex-prev {
+  left: 0;
+}
+
+.artists-list ul li.pseudo-class-hover,
+.events-list ul li.pseudo-class-hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-0.625rem);
+  -moz-transform: translateY(-0.625rem);
+  -ms-transform: translateY(-0.625rem);
+  -o-transform: translateY(-0.625rem);
+  transform: translateY(-0.625rem);
+}
+
+.artists-list ul li.pseudo-class-hover footer,
+.events-list ul li.pseudo-class-hover footer {
+  -webkit-transform: translateX(0rem);
+  -moz-transform: translateX(0rem);
+  -ms-transform: translateX(0rem);
+  -o-transform: translateX(0rem);
+  transform: translateX(0rem);
+}
+
+.site-footer .chalk-footer__sub ul li.pseudo-class-first-child {
+  margin-left: 0;
+}
+
+.form-date.pseudo-class-focus,
+.form-email.pseudo-class-focus,
+.form-password.pseudo-class-focus,
+.form-text.pseudo-class-focus,
+.form-textarea.pseudo-class-focus {
+  border-color: #999999;
+  border-color: #999999;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 1px 2px 2px;
+  color: black;
+  outline: 0;
+}
+
+.form-search.pseudo-class-focus {
+  border-color: #999999;
+  color: black;
+  outline: 0;
+}
+
+.form-select.pseudo-class-focus {
+  box-shadow: #9bccdf 0 0 5px;
+  outline: 0;
+}
+
+.menu > .menu-item > .menu-link.pseudo-class-hover {
+  color: #ff6550;
+}
+
+.dropdown .menu-link.pseudo-class-focus,
+.dropdown .menu-link.pseudo-class-hover {
+  color: #bfbfbf;
+}
+
+tbody tr.pseudo-class-first-child {
+  border-top: 1px solid #e6e6e6;
+}
+
+.vertical-tabs__menu-item a.pseudo-class-focus .vertical-tabs__menu-item-title,
+.vertical-tabs__menu-item a.pseudo-class-active .vertical-tabs__menu-item-title,
+.vertical-tabs__menu-item a.pseudo-class-hover .vertical-tabs__menu-item-title {
+  text-decoration: none;
+}
+
+.vertical-tabs__menu-item a.pseudo-class-focus {
+  outline: 1px dotted;
+}
+
+.vertical-tabs__menu-item a.pseudo-class-hover {
+  background-color: #ececec;
+}
+
+.vertical-tabs__menu-item.is-selected a.pseudo-class-hover {
+  background-color: #fff;
+}
+
+.tabs--secondary a.pseudo-class-focus,
+.tabs--secondary a.pseudo-class-hover {
+  background-color: #e5e5e5;
+}
+
+.tabs--secondary a.pseudo-class-focus {
+  color: #61afcd;
+  outline: 0;
+}
+
+.tabs--secondary > .nav__item.pseudo-class-first-child > a {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.tabs--secondary > .nav__item.pseudo-class-last-child > a {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.tabs--primary .is-active a.pseudo-class-hover {
+  background-color: #F7F7F7;
+}
+
+.tabs--primary a.pseudo-class-hover {
+  background-color: #ececec;
+}
+
+.pager__item a.pseudo-class-hover {
+  border-bottom: 2px solid #88c3d9;
+}

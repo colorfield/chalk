@@ -31,34 +31,66 @@
 
 })(jQuery, Backbone, Drupal, document);
 
-(function ($){
+  (function ($){
 
-  // 2. This code loads the IFrame Player API code asynchronously.
-  var tag = document.createElement('script');
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
 
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  // 3. This function creates an <iframe> (and YouTube player)
-  //    after the API code downloads.
-  var player;
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    var videoName = 'd_z3IsRmXVc';
+    var w = $(window).width(),
+    h = $(window).height();
 
-  window.onYouTubeIframeAPIReady = function(){
-    player = new YT.Player('player', {
-      height: '390',
-      width: '640',
-      videoId: 'd_z3IsRmXVc',
-      playerVars: { 'autoplay': 1, 'loop': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'playlist': 'd_z3IsRmXVc', 'iv_load_policy': 0 },
-      events: {
-        'onReady': onPlayerReady
-      }
+    window.onYouTubeIframeAPIReady = function(){
+      player = new YT.Player('player', {
+        videoId: videoName,
+        playerVars: {'suggestedQuality': 'hd1080', 'autoplay': 1, 'loop': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'playlist': 'd_z3IsRmXVc', 'iv_load_policy': 0 },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.setVolume(0);
+      setInterval(getPlayerState, 500);
+    }
+
+    function loopVideo() {
+      player.seekTo(0);
+      var done = false;
+    }
+
+    /**
+    * The 'getPlayerState' function returns the status of the player.
+    * @return {string} The current player's state -- e.g. 'playing', 'paused', etc.
+    */
+    var done = false;
+    function getPlayerState() {
+        var playerState = player.getPlayerState();
+        if (playerState == YT.PlayerState.PLAYING && !done) {
+          done = true;
+          setInterval(loopVideo, 52000);
+        }
+    }
+
+    $(window).on('load resize', function(){
+      vidRescale();
     });
-  }
 
-  // 4. The API will call this function when the video player is ready.
-  function onPlayerReady(event) {
-    event.target.setVolume(0);
-  }
+    function vidRescale(){
+      if (w/h > 16/9){
+        player.setSize(w, w/16*9);
+      } else {
+        player.setSize(h/9*16, h);
+      }
+    }
 
 })(jQuery);0

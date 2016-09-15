@@ -1,0 +1,98 @@
+//
+// Helpers
+//
+//  Extendables Partials
+//  Collect all silent extendables.
+//
+
+//
+// Webkit-style focus
+//
+
+%tab-focus {
+// Default
+  outline: thin dotted #333;
+// Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+//
+// CSS image replacement
+//
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+// use bourbon @include hide-text;
+//
+
+%hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+//
+// Buttons
+//
+// Your standard button suitable for clicking.
+//
+// Markup:
+// <a href="#" class="button {$modifiers}">Button</a>
+//
+// default                       - Default
+// :hover                        - A default button :hovered.
+// :focus                        - A default button :focused.
+// :disabled                     - A default button :disabled.
+// .button--primary            - Primary button.
+// .button--primary:hover      - Primary button :hovered.
+// .button--primary:focus      - Primary button :focused.
+// .button--primary:disabled      - Primary button :disabled.
+//
+// Styleguide 3.0
+
+%button{
+  @include button;
+}
+
+%button--default{
+  @extend %button;
+  background-color: $button-bg-color;
+  border: 2px solid darken($button-bg-color, 8%);
+  color: $button-text-color;
+
+  &:hover {
+    background-color: darken($button-bg-color, 8%);
+    color: $button-text-color;
+  }
+  &:focus{
+    box-shadow: $button-bg-color 0 0 4px;
+    color: $button-text-color;
+    outline: 0;
+  }
+}
+
+%button--primary {
+  @extend %button;
+  background-color: $button-prim-bg-color;
+  border: 2px solid darken($button-prim-bg-color, 8%);
+  color: $button-prim-text-color;
+
+  &:hover{
+    background-color: darken($button-prim-bg-color, 8%);
+    color: $button-prim-text-color;
+  }
+  &:focus {
+    box-shadow: $button-prim-bg-color 0 0 4px;
+    color: $button-prim-text-color;
+    outline: 0;
+  }
+}
+
+.button{
+  @extend %button--default;
+}
+
+.button--primary{
+  @extend %button--primary;
+}

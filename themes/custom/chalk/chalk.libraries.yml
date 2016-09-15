@@ -1,0 +1,39 @@
+base:
+  header: false
+  js:
+    js/lib/jquery.animateSprite.min.js: { }
+    js/lib/grids.min.js: { }
+    js/scripts.js: { }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/modernizr
+
+  css:
+    theme:
+      css/style.css: {}
+
+navigation:
+  version: 1.x
+  js:
+    js/lib/a11y-toggle/a11y-toggle.min.js: {}
+    js/navigation.js: {}
+
+dropdown:
+  version: 1.x
+  js:
+    js/lib/a11y-toggle/a11y-toggle.min.js: {}
+    js/dropdown.js: {}
+
+modernizr:
+  version: 1.x
+  js:
+    js/modernizr.js: {}
+
+orientationchange:
+  version: 1.x
+  js:
+    js/lib/orientationchange/ios-orientationchange-fix.js: {}

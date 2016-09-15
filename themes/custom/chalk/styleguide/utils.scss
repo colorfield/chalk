@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import "bourbon";
+@import "base/grid-settings";
+
+// Styleguide additionnal scss
+// Used for styling components only in styleguide purpose
+// so thoses styles are not needed globally
+
+// Grid
+.l-grid__column{
+  background-color: #cfe3e8;
+  border: 1px solid white;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

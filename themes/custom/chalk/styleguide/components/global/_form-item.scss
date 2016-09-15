@@ -1,0 +1,290 @@
+// @file
+// Form item
+
+.form-item {
+  margin: rhythm(1) 0;
+
+  .form-item{
+    margin-top: 0;
+  }
+}
+
+.form-item__label {
+  display: block;
+  color: $form-label-color;
+  font-weight: 600;
+  margin-bottom: rhythm(1/3);
+
+  .form-type-checkbox &,
+  .form-type-radio &{
+    display: inline;
+    font-weight: normal;
+  }
+}
+
+.form-required{
+  // @todo use :not and print "Optional" instead of required
+  position: relative;
+  &:after{
+    content: '*';
+    color: red;
+  }
+}
+
+fieldset:not(.fieldgroup) {
+  border-radius: 3px;
+  border:1px solid $form-border-color;
+  margin: rhythm(1/2) 0 rhythm(1);
+  padding: rhythm(2) $gutter rhythm(1/2);
+  position: relative;
+}
+
+.fieldset-legend {
+  color: $form-label-color;
+  text-transform: uppercase;
+  font-size: $font-size-md;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  position: absolute;
+  top: rhythm(1/2);
+}
+
+.fieldgroup {
+  border: 0;
+  margin: rhythm(1) 0;
+  padding: rhythm(3/2) 0 0;
+  position: relative;
+}
+
+.form-item__description {
+  color: $secondary-text-color;
+  font-size: $font-size-md;
+  line-height: 1.3;
+  margin-top: rhythm(1/3);
+}
+
+// @todo define "optional" fields instead
+// .form-item__required-marker:before {
+//   content: "*";
+// }
+
+.form-checkboxes .form-type-checkbox,
+.form-radios .form-type-radio {
+  margin: 0;
+}
+
+// .form-item--date-day,
+// .form-item--date-month,
+// .form-item--date-year {
+//   display: inline-block;
+//   margin: 0;
+// }
+
+.form-select{
+  white-space: nowrap;
+}
+
+.form-date,
+.form-email,
+.form-password,
+.form-text,
+.form-textarea {
+  background-color: $form-background-color;
+  border: 1px solid $form-border-color;
+  border-radius: 3px;
+  box-shadow: inset rgba($black, 0.15) 1px 1px 1px;
+  color: $form-text-color;
+  font-size: $font-size-md;
+  line-height: 1;
+  padding: rhythm(1/3, $font-size-md) rem(10);
+  width: 100%;
+
+  @include media($b-small) {
+    width: auto;
+  }
+
+  &:focus {
+    border-color: darken($form-border-color, 15%);
+    border-color: darken($form-border-color, 15%);
+    box-shadow: inset rgba($black, 0.15) 1px 2px 2px;
+    color: darken($form-text-color, 10%);
+    outline: 0;
+  }
+}
+
+.form-textarea{
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.form-search{
+  border: 2px solid $form-border-color;
+
+  &:focus {
+    border-color: darken($form-border-color, 15%);
+    color: darken($form-text-color, 10%);
+    outline: 0;
+  }
+}
+
+.form-select{
+  background-color: $form-background-color;
+  border: 1px solid $form-border-color;
+  border-radius: 3px;
+  color: $form-text-color;
+  font-size: $font-size-md;
+  line-height: 1;
+  width: 100%;
+
+  &:focus {
+    box-shadow: lighten($link-color, 15%) 0 0 5px;
+    outline: 0;
+  }
+
+  @include media($b-small) {
+    width: auto;
+  }
+}
+
+// .form-item__required-marker{
+//   color: $error-color;
+// }
+
+// // Password strength indicator.
+// .confirm-parent,
+// .password-parent {
+//   @include media($b-small) {
+//     clear: left;
+//     max-width: rem(600px);
+//   }
+// }
+
+// .form-item--password-confirm{
+//   @include media($b-small) {
+//     label{
+//       width: 50%;
+//     }
+//     .password-field {
+//       width: 50%;
+//     }
+//   }
+// }
+
+// .form-item--password-confirm-pass-1 {
+//   margin-bottom: rhythm(0.5);
+// }
+
+// .form-item--password-confirm-pass-2 {
+//   margin: rhythm(0.5) 0;
+// }
+
+// .password-strength {
+//   font-size: $font-size-md;
+//   margin-bottom: rhythm(1/3);
+
+//   @include media($b-small) {
+//     float: right;
+//     margin-bottom: 0;
+//     margin-top: rhythm(1);
+//     width: 48%;
+//   }
+// }
+// .password-strength-title {
+//   color: $gray50;
+//   display: inline;
+// }
+// .password-strength-text {
+//   float: right;
+//   font-weight: bold;
+// }
+// .password-indicator {
+//   background-color: $gray50;
+//   height: 0.3em;
+//   width: 100%;
+
+//   div {
+//     height: 100%;
+//     width: 0%;
+//     background-color: #47C965;
+//   }
+// }
+
+// div.password-confirm {
+//   color: $gray50;
+//   font-size: $font-size-md;
+
+//   @include media($b-small) {
+//     float: right;
+//     margin-top: rhythm(1);
+//     width: 48%;
+//   }
+// }
+
+// input.password-confirm{
+//   margin-bottom: rhythm(1/2);
+
+//   @include media($b-small) {
+//     width: 50%;
+//   }
+// }
+
+// .password-suggestions {
+//   border-radius: 3px;
+//   font-size: $font-size-md;
+//   width: 100%;
+
+//   @include media($b-small) {
+//     border: 1px solid #B4B4B4;
+//     padding: rhythm(1/3) rem(10px);
+
+//     ul{
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+// .form-item--managed-file{}
+
+//   .form-managed-file{
+//     border: 1px solid $form-border-color;
+//     border-radius: 3px;
+//     display: inline-block;
+//     overflow: hidden;
+//     padding: rem(2px) rem(85px) rem(2px) rem(2px);
+//     position: relative;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+
+//     .file{
+//       a{
+//         text-decoration: none;
+//       }
+//     }
+
+//     [type="file"]{
+//       display: block;
+//       font-size: $font-size-md;
+//       outline: none;
+//       width: 100%;
+//     }
+
+//     [type="submit"]{
+//       @include border-left-radius(0);
+//       background-color: $button-bg-color;
+//       border: none;
+//       border-left: 1px solid $form-border-color;
+//       color: $button-text-color;
+//       font-size: $font-size-sm;
+//       font-weight: 600;
+//       height: 100%;
+//       right: 0;
+//       overflow: hidden;
+//       padding: 0 rem(10px);
+//       position: absolute;
+//       text-overflow: ellipsis;
+//       top: 0;
+//       white-space: nowrap;
+//       width: rem(80px);
+//       z-index: 1;
+//     }
+//   }
