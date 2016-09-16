@@ -134,7 +134,8 @@
   }
 }
 
-.video-list, .artists-list, .events-list {
+.videos-list, .artists-list, .events-list {
+  padding-top: $gutter*2;
   a {
     color: $black;
     text-decoration: none;

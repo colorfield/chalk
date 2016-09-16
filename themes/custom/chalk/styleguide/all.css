@@ -669,9 +669,11 @@ h3 {
     border: 1px solid black;
     padding: 1.25rem; }
 
-.video-list a, .artists-list a, .events-list a {
-  color: black;
-  text-decoration: none; }
+.videos-list, .artists-list, .events-list {
+  padding-top: 40px; }
+  .videos-list a, .artists-list a, .events-list a {
+    color: black;
+    text-decoration: none; }
 
 .videos-list {
   padding-left: 20px;
