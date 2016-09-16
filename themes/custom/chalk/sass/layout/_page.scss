@@ -142,8 +142,11 @@
   }
 }
 
-.event-page-content {
-  margin-top: $gutter*2;
+.page-event {
+  .article--full-event {
+    padding-top: $gutter*2;
+  }
+
 }
 
 .videos-list {

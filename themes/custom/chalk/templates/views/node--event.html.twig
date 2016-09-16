@@ -8,6 +8,7 @@
 {%
   set classes = [
     'article',
+    'article--full-event',
     'article--' ~ view_mode|clean_class,
     node.isPublished() ? '' : 'node--unpublished'
   ]
@@ -21,7 +22,7 @@
 
 {% block content %}
   <article id="node-{{ node.id }}" class="{{ attributes.addClass(classes).class }}"{{ attributes }}>
-    <div class="l-constrain event-page-content">
+    <div class="l-constrain">
       {{ title_prefix }}
       {% if not page %}
         <h1{{ title_attributes.addClass(title_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h1>
