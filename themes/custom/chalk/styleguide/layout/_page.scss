@@ -142,24 +142,8 @@
   }
 }
 
-.page-event {
-  .article--full {
-    padding-top: $gutter*2;
-    padding-left: $gutter;
-    padding-right: $gutter;
-    position: relative;
-    @include media($b-medium) {
-      @include outer-container($l-medium);
-      padding-left: 0;
-      padding-right: 0;
-    }
-    @include media($b-big) {
-      @include outer-container($l-big);
-    }
-    @include media($b-wide) {
-      @include outer-container($l-wide);
-    }
-  }
+.event-page-content {
+  margin-top: $gutter*2;
 }
 
 .videos-list {
