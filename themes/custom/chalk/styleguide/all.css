@@ -675,37 +675,37 @@ h3 {
     color: black;
     text-decoration: none; }
 
-.page-event {
+.page-event .article--full  {
   padding-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
   position: relative; }
   @media screen and (min-width: 48.0625rem) {
-    .page-event {
+    .page-event .article--full  {
       max-width: 90%;
       margin-left: auto;
       margin-right: auto;
       padding-left: 0;
       padding-right: 0; }
-      .page-event::after {
+      .page-event .article--full ::after {
         clear: both;
         content: "";
         display: table; } }
   @media screen and (min-width: 76.25rem) {
-    .page-event {
+    .page-event .article--full  {
       max-width: 73.75rem;
       margin-left: auto;
       margin-right: auto; }
-      .page-event::after {
+      .page-event .article--full ::after {
         clear: both;
         content: "";
         display: table; } }
   @media screen and (min-width: 89.375rem) {
-    .page-event {
+    .page-event .article--full  {
       max-width: 86.25rem;
       margin-left: auto;
       margin-right: auto; }
-      .page-event::after {
+      .page-event .article--full ::after {
         clear: both;
         content: "";
         display: table; } }
