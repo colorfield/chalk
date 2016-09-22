@@ -11,8 +11,7 @@
         "drupal/core": "~8.0",
         "drupal/address": "8.*",
         "backupmigrate/drupal": "8.*",
-        "drupal/webprofiler": "8.*",
-        "drupal/pathauto": "8.*"
+        "drupal/webprofiler": "8.*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -30,8 +29,7 @@
                 "core/composer.json",
                 "modules/contrib/address/composer.json",
                 "modules/contrib/backup_migrate/composer.json",
-                "modules/contrib/devel/webprofiler/composer.json",
-                "modules/contrib/pathauto/composer.json"
+                "modules/contrib/devel/webprofiler/composer.json"
             ],
             "recurse": false,
             "replace": false,
