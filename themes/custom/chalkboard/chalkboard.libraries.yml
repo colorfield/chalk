@@ -2,6 +2,7 @@ base:
   header: false
   js:
     js/lib/jquery.animateSprite.min.js: { }
+    js/lib/jquery-ui.min.js: { }
     js/lib/grids.min.js: { }
     js/scripts.js: { }
   dependencies:
@@ -24,6 +25,7 @@ base:
     theme:
       css/theme/theme.css: {}
       css/theme/print.css: { media: print }
+      //fonts.googleapis.com/css?family=Pacifico": { type: external }
 
 navigation:
   version: 1.x

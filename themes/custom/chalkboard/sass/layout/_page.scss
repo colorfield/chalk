@@ -7,8 +7,7 @@
 }
 
 .site-header{
-  padding: rem(40) 0 rem(10);
-  box-shadow: 0 1px 4.8px 0.5px rgba(1, 1, 1, .5);
+  padding: rem(40) 0 rem(20);
   .block-system-branding-block {
     height: rem(50);
     position: relative;
@@ -67,65 +66,82 @@
       }
     }
   }
-  .block-views-blockevents-block-1 .heading-block {
-    background: #8acb88;
-    padding: rem(40) 0 0;
+  .main-content {
     position: relative;
-    z-index: 50;
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 150%;
-      height: rem(200);
-      bottom: rem(-120);
-      left: 50%;
+    z-index: 0;
+    padding-top: rem(100);
+    .l-grid--cols-2 {
+      margin-bottom: rem(100);
+    }
+  }
+  .block-views-blockevents-block-1 {
+    overflow: hidden;
+    .heading-block {
       background: #8acb88;
-      z-index: -10;
-      @include transform(translateX(-50%) rotate(-5deg));
+      padding: rem(40) 0 0;
+      position: relative;
+      z-index: 50;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 150%;
+        height: rem(200);
+        bottom: rem(-120);
+        left: 50%;
+        background: #8acb88;
+        z-index: -10;
+        @include transform(translateX(-50%) rotate(-5deg));
+      }
     }
-  }
-  .block-views-blockevents-block-1 h2 {
-    font-size: modular-scale(7);
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .block-views-blockevents-block-1 .subtitle {
-    display: block;
-  }
-  .block-views-blockevents-block-1 h2,
-  .block-views-blockevents-block-1 .subtitle{
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: white;
-  }
-  .block-system-main-block,
-  .block-views-blockevents-block-1 h2,
-  .block-views-blockevents-block-1 .subtitle,
-  .block-views-blockevents-block-1 .more-link {
-    padding-left: $gutter;
-    padding-right: $gutter;
-    position: relative;
-    @include media($b-medium) {
-      @include outer-container($l-medium);
-      padding-left: 0;
-      padding-right: 0;
+    h2 {
+      font-size: modular-scale(7);
+      font-weight: bold;
+      text-transform: uppercase;
     }
+    .subtitle {
+      display: block;
+    }
+    h2,
+    .subtitle{
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: white;
+    }
+    .block-system-main-block,
+    h2,
+    .subtitle,
+    .more-link {
+      padding-left: $gutter;
+      padding-right: $gutter;
+      position: relative;
+      @include media($b-medium) {
+        @include outer-container($l-medium);
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-    @include media($b-big) {
-      @include outer-container($l-big);
-    }
+      @include media($b-big) {
+        @include outer-container($l-big);
+      }
 
-    @include media($b-wide) {
-      @include outer-container($l-wide);
+      @include media($b-wide) {
+        @include outer-container($l-wide);
+      }
     }
   }
+}
+
+.flex-viewport {
+  overflow: visible !important;
+  overflow-x: hidden;
 }
 
 .slides {
   position: relative;
   z-index: 50;
+  @include perspective(rem(1000));
   &:before {
     content: '';
     height: rem(200);
@@ -140,9 +156,8 @@
   }
   li {
     position: relative;
-    img {
-      opacity: 0.2;
-    }
+    @include transform-style(preserve-3d);
+    will-change: transform;
     .views-field-field-artist {
       position: absolute;
       height: 100%;
@@ -156,15 +171,16 @@
           width: 100%;
           height: 100%;
           text-align: center;
-          padding-top: 480px;
           position: absolute;
           top: 0;
-          font-size: 34px;
+          left: 0;
+          padding: rem(300) 0 0;
+          font-size: rem(34);
           text-transform: uppercase;
           color: white;
           font-weight: bold;
           opacity: 0;
-          line-height: 36px;
+          line-height: rem(36);
           &:hover {
             animation: blurIn 1s;
             opacity: 1;
@@ -194,8 +210,8 @@
 
 .flex-direction-nav a {
   padding: 30px;
-  background: rgba(1, 1, 1, .4);
   opacity: 1;
+  z-index: 9999;
   &:before {
     position: absolute;
     top: 50%;
@@ -203,7 +219,7 @@
     margin-top: -22px;
     margin-left: -10px;
     font-size: 30px;
-    color: white;
+    color: $black;
   }
 }
 
@@ -372,6 +388,15 @@
       padding-bottom: rem(44);
     }
   }
+  .faux-www {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 200;
+    top: 0;
+    left: 0;
+  }
 }
 
 .page-artist {
@@ -454,10 +479,10 @@
     max-width: 1180px;
     width: 100%;
     margin: 0 auto;
-    padding: 180px 40px 80px;
+    padding: 180px 0 80px;
     text-align: center;
     @include media($b-medium) {
-      padding: 180px 40px;
+      padding: 180px 0;
     }
     h2 {
       font-size: 54px;

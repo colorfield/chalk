@@ -246,57 +246,62 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility; }
 
 /* line 46, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+span.subtitle {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem; }
+
+/* line 51, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 h1 {
   font-size: 1.728rem;
   margin-bottom: 1.123rem; }
 
-/* line 52, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 57, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 h2 {
   font-size: 1.44rem;
   margin: 2.808rem 0 0.936rem; }
 
-/* line 58, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 63, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 h3 {
   font-size: 1.2rem;
   margin: 2.34rem 0 1.56rem; }
 
-/* line 64, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 69, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 h4 {
   font-size: 1rem;
   line-height: 1.3;
   margin: 1.95rem 0 0.65rem; }
 
-/* line 71, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 76, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 h5 {
   font-size: 0.833rem;
   margin: 1.625rem 0 0.542rem; }
 
-/* line 77, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 82, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 h6 {
   font-size: 0.694rem;
   margin: 1.354rem 0 0.451rem; }
 
-/* line 86, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 91, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 a {
   color: #61afcd;
   outline-offset: 0.125em;
   position: relative; }
-  /* line 92, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 97, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   a:focus, a:hover {
     color: #88c3d9;
     text-decoration: none; }
-  /* line 97, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 102, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   a:visited {
     color: #307b98; }
 
-/* line 102, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 107, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 abbr {
   font-variant: small-caps; }
-  /* line 105, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 110, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   abbr:hover {
     cursor: help; }
 
-/* line 123, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 128, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 blockquote {
   color: black;
   border-left: 3px solid #bfbfbf;
@@ -305,40 +310,40 @@ blockquote {
   margin: 0 0 1.25rem 1rem;
   padding-left: 1rem; }
 
-/* line 142, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 147, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 code {
   background-color: #fff;
   color: #404040; }
 
-/* line 153, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 158, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 dd {
   margin-bottom: 1.5rem; }
 
-/* line 163, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 168, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 dl {
   margin: 0 0 1.5rem; }
 
-/* line 175, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 180, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 figcaption {
   color: #1a1a1a;
   font-style: italic; }
 
-/* line 187, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 192, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 hr {
   margin: 1.5rem 0;
   padding-bottom: -1px; }
 
-/* line 197, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 202, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 img,
 picture {
   max-width: 100%;
   height: auto; }
 
-/* line 215, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 220, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 input[type="image"] {
   box-sizing: content-box; }
 
-/* line 224, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 229, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 input[type="search"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -347,47 +352,47 @@ input[type="search"] {
   appearance: none;
   max-width: 100%; }
 
-/* line 241, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 246, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 legend {
   margin: 0; }
 
-/* line 245, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 250, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 mark {
   background: #ff0;
   color: black; }
 
-/* line 264, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 269, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 ol {
   margin: 0 0 1.5rem;
   padding: 0 0 0 1.25rem; }
-  /* line 268, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 273, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   ol ol,
   ol ul {
     margin: 0; }
 
-/* line 284, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 289, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 p {
   margin: 1.5rem 0; }
 
-/* line 290, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 295, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 pre {
   margin: 0 0 1.5rem; }
 
-/* line 306, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 311, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 small {
   font-size: 0.833rem; }
 
-/* line 330, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+/* line 335, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
 ul {
   margin: 0 0 1.5rem;
   padding: 0 0 0 1.25rem; }
-  /* line 334, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 339, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   ul ol,
   ul ul {
     margin: 0; }
 
 @media print {
-  /* line 346, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 351, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   * {
     background: transparent !important;
     box-shadow: none !important;
@@ -395,37 +400,37 @@ ul {
     -ms-filter: none !important;
     filter: none !important;
     text-shadow: none !important; }
-  /* line 355, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 360, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   iframe,
   nav {
     display: none; }
-  /* line 360, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 365, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   a,
   a:visited {
     text-decoration: none; }
-  /* line 365, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 370, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   a[href]:after {
     color: blue; }
-  /* line 369, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 374, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   a[href^="mailto:"]:after {
     content: ""; }
-  /* line 373, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 378, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   blockquote,
   pre {
     border: 1px solid #999;
     page-break-inside: avoid; }
-  /* line 379, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 384, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   thead {
     display: table-header-group; }
-  /* line 383, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 388, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   img,
   tr,
   ul {
     page-break-inside: avoid; }
-  /* line 389, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 394, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   img {
     max-width: 100% !important; }
-  /* line 393, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 398, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   h1 a:after,
   h2 a:after,
   h3 a:after,
@@ -433,14 +438,14 @@ ul {
   h5 a:after,
   h6 a:after {
     display: inline-block; }
-  /* line 402, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 407, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   h2,
   h3,
   h4,
   p {
     orphans: 3;
     widows: 3; }
-  /* line 410, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
+  /* line 415, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/base/_html-elements.scss */
   h2,
   h3,
   h4 {

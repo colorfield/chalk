@@ -41,9 +41,6 @@
     <div class="wrapper">
       {{ content|without('comment', 'links', 'field_banner') }}
     </div>
-
-    <footer>
-      <a class="read-more__button" href="{{ url }}" rel="bookmark">Read more</a>
-    </footer>
+    <a class="faux-www" href="{{ url }}" rel="bookmark">Read more</a>
 </article>
 {% endblock %}

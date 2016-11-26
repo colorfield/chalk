@@ -43,6 +43,11 @@ body{
   text-rendering: optimizeLegibility;
 }
 
+span.subtitle {
+  font-family: $cursive-font-family;
+  font-size: rem(40);
+}
+
 h1 {
   @extend %hN;
   font-size: $font-size-xxl;

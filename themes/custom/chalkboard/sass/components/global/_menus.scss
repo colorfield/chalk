@@ -27,9 +27,11 @@ $submenu-text-color: $white;
 
 // Set inline menu for the first level items
 .menu--first-level{
+  margin-top: rem(40);
+  text-align: center;
   @include media($b-medium) {
     display: table;
-
+    margin-top: rem(20);
     > .menu-item{
       display: table-cell;
 
@@ -207,12 +209,18 @@ $submenu-text-color: $white;
 // ARIA hidden menu
 // Source: http://edenspiekermann.github.io/a11y-toggle/
 
+.site-navigation {
+  position: relative;
+}
+
 .nav-toggle{
   border: none;
   background: transparent;
   cursor: pointer;
   outline: none;
-
+  position: absolute;
+  right: 0;
+  top: rem(-80);
   @include media($b-medium) {
     display: none;
   }
