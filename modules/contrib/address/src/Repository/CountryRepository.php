@@ -95,7 +95,7 @@ class CountryRepository extends ExternalCountryRepository implements ExternalCou
   /**
    * {@inheritdoc}
    */
-  protected function getDefaultLocale() {
+  public function getDefaultLocale() {
     // The getCurrentLanguage() fallback is a workaround for core bug #2684873.
     $language = $this->languageManager->getConfigOverrideLanguage() ?: $this->languageManager->getCurrentLanguage();
     return $language->getId();
