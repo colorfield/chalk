@@ -1,0 +1,49 @@
+// Drupal Messages
+//
+
+.messages {
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px 1px 1px 8px;
+  margin-bottom: rhythm(1, $font-size-md);
+  margin-top: rhythm(1, $font-size-md);
+  padding: rhythm(1/2, $font-size-md) $gutter/2;
+  position: relative;
+  word-wrap: break-word;
+
+  @media print {
+    background-image: none !important;
+    padding-left: rhythm(1/2, $font-size-md);
+  }
+
+  em {
+    color: $black;
+  }
+}
+
+.messages--status {
+  background-color: lighten($status-color, 52%);
+  border-color: lighten($status-color, 27%);
+  border-left-color: $status-color;
+  color: darken($status-color, 15%);
+}
+
+.messages--warning {
+  background-color: lighten($warning-color, 22%);
+  border-color: lighten($warning-color, 8%);
+  border-left-color: $warning-color;
+  color: darken($warning-color, 28%);
+}
+
+.messages--error {
+  background-color: lighten($error-color, 38%);
+  border-color: lighten($error-color, 25%);
+  border-left-color: $error-color;
+  color: darken($error-color, 25%);
+}
+
+.messages__list{
+  margin-bottom: 0;
+}
+// .messages__item {}

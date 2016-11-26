@@ -1,0 +1,34 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">{{ site_name }}</a>
+  {% endif %}
+  {% if site_name %}
+    <div class="l-constrain">
+      <article class="l-grid--cols-2">
+        <span class="subtitle">We are</span>
+        <h2 class="site-brand-name">{{ site_name }}</h2>
+      {% endif %}
+      {% if site_slogan %}
+        <p>We have one mission. To gather various known and not-so-well-known artists around the same theme : the Board.</p>
+        <p>Skateboard, longboard, surfboard, snowboard, kiteboard...We never get fed up with so many opportunities to express ourselves.Stay connected. Get to know the Chalkers. Meet us at our next exhibitions and events. Order some custom boards.</p>
+        <h3 class="site-slogan">{{ site_slogan }}</h3>
+      </article>
+    </div>
+    <img src="{{ directory }}/images/content_chalk_wall.jpg" alt="chalk custom board project wall" width="1680" height="760" />
+  {% endif %}
+{% endblock %}

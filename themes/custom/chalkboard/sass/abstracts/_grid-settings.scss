@@ -1,0 +1,57 @@
+//
+// Override Bourbon grid settings
+//
+
+// Using Neat grid system
+// @see https://robots.thoughtbot.com/introducing-bourbon-neat-a-sass-based-responsive-grid
+// @see https://www.cheatography.com/claysmith/cheat-sheets/bourbon-neat/
+@import "neat-helpers";
+
+// Enable visual grid
+// @see http://thoughtbot.github.io/neat-docs/latest/#visual-grid
+// $visual-grid: true !global;
+
+// When set to true, it sets the box-sizing property of all elements to border-box.
+// Don't put it to true since it will be printed in each stylesheet.
+// @see http://thoughtbot.github.io/neat-docs/latest/#border-box-sizing
+$border-box-sizing: false !global;
+
+// Breakpoints
+// These are the values you should use in your Media Queries (mobile first)
+$b-small-val: rem(480px);
+$b-medium-val: rem(769px);
+$b-big-val: rem(1220px);
+$b-wide-val: rem(1430px);
+
+// Grid values
+// This will be the max-width of you content - refer to the layout
+$l-small: 100%;
+$l-medium: 90%;
+$l-big: rem(1180px);
+$l-wide: rem(1380px);
+
+// Page max-width helper
+$l-max-width: rem(1660px);
+
+// Neat Overrides
+// Use http://gridcalculator.dk/#/1180/12/20/0
+// @see http://thoughtbot.github.io/neat-docs/latest/#column
+$column: 80px !global;
+// http://thoughtbot.github.io/neat-docs/latest/#gutter
+$gutter: 20px !global;
+$small-gutter: 10px !global;
+// @see http://thoughtbot.github.io/neat-docs/latest/#grid-columns
+// $grid-columns: 14;
+// @see http://thoughtbot.github.io/neat-docs/latest/#max-width
+// $max-width: em(1088) !default;
+$max-width: $l-wide !global;
+
+// Breakpoints
+$b-small: new-breakpoint(min-width $b-small-val 4);
+$b-medium: new-breakpoint(min-width $b-medium-val 8);
+$b-big: new-breakpoint(min-width $b-big-val 12);
+$b-wide: new-breakpoint(min-width $b-wide-val 14);
+
+// Need to calculate column width?
+// Use width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
+// @see http://initializd.com/blog/2015/11/how-to-get-column-width-values-when-using-neat
