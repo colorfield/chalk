@@ -97,12 +97,14 @@
 
 /* line 9, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .site-header {
-  padding: 2.5rem 0 1.25rem; }
-  /* line 11, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  position: relative;
+  padding: 2.5rem 0 1.25rem;
+  z-index: 200; }
+  /* line 13, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .site-header .block-system-branding-block {
     height: 3.125rem;
     position: relative; }
-  /* line 15, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 17, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .site-header .site-logo {
     width: 46.938rem;
     height: 33.875rem;
@@ -124,7 +126,7 @@
     -o-transform-origin: left top;
     transform-origin: left top; }
 
-/* line 29, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 31, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .site-brand-name {
   margin-top: 0;
   margin-bottom: 0;
@@ -133,7 +135,7 @@
   font-weight: bold;
   text-transform: uppercase; }
 
-/* line 37, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 39, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .site-slogan {
   margin-top: 0;
   padding-top: 0;
@@ -141,52 +143,57 @@
   text-transform: uppercase;
   font-weight: lighter; }
 
-/* line 45, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 47, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .l-grid--cols-2 {
   padding-bottom: 3.125rem; }
   @media screen and (min-width: 48.062rem) {
-    /* line 45, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 47, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .l-grid--cols-2 {
       width: 50%; } }
 
-/* line 53, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 55, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+.path-frontpage .flexslider {
+  margin-bottom: 0;
+  margin-top: -6.25rem; }
+
+/* line 59, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .path-frontpage .block-system-branding-block {
   position: relative;
   z-index: 50; }
   @media screen and (min-width: 48.062rem) {
-    /* line 53, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 59, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .path-frontpage .block-system-branding-block {
       padding: 0; } }
-  /* line 59, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 65, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .path-frontpage .block-system-branding-block img {
     display: block; }
     @media screen and (min-width: 48.062rem) {
-      /* line 59, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 65, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .path-frontpage .block-system-branding-block img {
         position: absolute;
         bottom: 0;
         right: 0;
         z-index: -10; } }
 
-/* line 69, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 75, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .path-frontpage .main-content {
   position: relative;
-  z-index: 0;
-  padding-top: 6.25rem; }
-  /* line 73, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
-  .path-frontpage .main-content .l-grid--cols-2 {
-    margin-bottom: 6.25rem; }
+  z-index: 0; }
+  @media screen and (min-width: 48.062rem) {
+    /* line 78, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    .path-frontpage .main-content .l-grid--cols-2 {
+      margin-bottom: 6.25rem; } }
 
-/* line 77, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 84, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .path-frontpage .block-views-blockevents-block-1 {
   overflow: hidden; }
-  /* line 79, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 86, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .path-frontpage .block-views-blockevents-block-1 .heading-block {
     background: #8acb88;
     padding: 2.5rem 0 0;
     position: relative;
     z-index: 50; }
-    /* line 84, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 91, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .path-frontpage .block-views-blockevents-block-1 .heading-block:after {
       content: '';
       display: block;
@@ -202,22 +209,22 @@
       -ms-transform: translateX(-50%) rotate(-5deg);
       -o-transform: translateX(-50%) rotate(-5deg);
       transform: translateX(-50%) rotate(-5deg); }
-  /* line 97, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 104, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .path-frontpage .block-views-blockevents-block-1 h2 {
     font-size: 3.583rem;
     font-weight: bold;
     text-transform: uppercase; }
-  /* line 102, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 109, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .path-frontpage .block-views-blockevents-block-1 .subtitle {
     display: block; }
-  /* line 105, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 112, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .path-frontpage .block-views-blockevents-block-1 h2,
   .path-frontpage .block-views-blockevents-block-1 .subtitle {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
     color: white; }
-  /* line 112, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 119, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .path-frontpage .block-views-blockevents-block-1 .block-system-main-block,
   .path-frontpage .block-views-blockevents-block-1 h2,
   .path-frontpage .block-views-blockevents-block-1 .subtitle,
@@ -226,7 +233,7 @@
     padding-right: 20px;
     position: relative; }
     @media screen and (min-width: 48.062rem) {
-      /* line 112, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 119, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .path-frontpage .block-views-blockevents-block-1 .block-system-main-block,
       .path-frontpage .block-views-blockevents-block-1 h2,
       .path-frontpage .block-views-blockevents-block-1 .subtitle,
@@ -245,7 +252,7 @@
           content: "";
           display: table; } }
     @media screen and (min-width: 76.25rem) {
-      /* line 112, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 119, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .path-frontpage .block-views-blockevents-block-1 .block-system-main-block,
       .path-frontpage .block-views-blockevents-block-1 h2,
       .path-frontpage .block-views-blockevents-block-1 .subtitle,
@@ -262,7 +269,7 @@
           content: "";
           display: table; } }
     @media screen and (min-width: 89.375rem) {
-      /* line 112, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 119, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .path-frontpage .block-views-blockevents-block-1 .block-system-main-block,
       .path-frontpage .block-views-blockevents-block-1 h2,
       .path-frontpage .block-views-blockevents-block-1 .subtitle,
@@ -279,19 +286,18 @@
           content: "";
           display: table; } }
 
-/* line 136, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 143, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .flex-viewport {
-  overflow: visible !important;
-  overflow-x: hidden; }
+  padding: 6.25rem 0; }
 
-/* line 141, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 147, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .slides {
   position: relative;
   z-index: 50;
   -webkit-perspective: 62.5rem;
   -moz-perspective: 62.5rem;
   perspective: 62.5rem; }
-  /* line 145, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 151, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .slides:before {
     content: '';
     height: 12.5rem;
@@ -307,7 +313,7 @@
     -ms-transform: translateY(-50%) translateX(-50%) rotate(-5deg);
     -o-transform: translateY(-50%) translateX(-50%) rotate(-5deg);
     transform: translateY(-50%) translateX(-50%) rotate(-5deg); }
-  /* line 157, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 163, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .slides li {
     position: relative;
     -webkit-transform-style: preserve-3d;
@@ -316,18 +322,19 @@
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
     will-change: transform; }
-    /* line 161, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 167, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .slides li .views-field-field-artist {
       position: absolute;
       height: 100%;
       width: 100%;
       top: 0;
       left: 0; }
-      /* line 167, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 173, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .slides li .views-field-field-artist .field-content {
         height: 100%;
-        position: relative; }
-        /* line 170, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        position: relative;
+        overflow: hidden; }
+        /* line 177, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .slides li .views-field-field-artist .field-content a {
           width: 100%;
           height: 100%;
@@ -338,39 +345,40 @@
           padding: 18.75rem 0 0;
           font-size: 2.125rem;
           text-transform: uppercase;
+          text-decoration: none;
           color: white;
           font-weight: bold;
           opacity: 0;
           line-height: 2.25rem; }
-          /* line 184, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 192, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .slides li .views-field-field-artist .field-content a:hover {
             animation: blurIn 1s;
             opacity: 1; }
-    /* line 191, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 199, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .slides li .flex-caption {
       display: none; }
-  /* line 195, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 203, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .slides .flex-control-paging {
     display: none; }
 
-/* line 199, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 207, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .flex-control-paging {
   display: none; }
 
-/* line 203, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 211, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .flexslider:hover .flex-direction-nav .flex-nav-next {
   right: 0; }
 
-/* line 207, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 215, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .flexslider:hover .flex-direction-nav .flex-nav-prev {
   left: 0; }
 
-/* line 211, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 219, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .flex-direction-nav a {
   padding: 30px;
   opacity: 1;
   z-index: 9999; }
-  /* line 215, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 223, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .flex-direction-nav a:before {
     position: absolute;
     top: 50%;
@@ -380,34 +388,34 @@
     font-size: 30px;
     color: black; }
 
-/* line 226, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 234, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .page--full[about="/get-involved"] {
   text-align: center; }
-  /* line 228, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 236, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .page--full[about="/get-involved"] .contact-button {
     display: inline-block;
     border: 1px solid black;
     padding: 1.25rem; }
 
-/* line 235, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 243, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .videos-list, .artists-list, .events-list {
   padding-top: 40px; }
-  /* line 237, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 245, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .videos-list a, .artists-list a, .events-list a {
     color: black;
     text-decoration: none; }
 
-/* line 244, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 252, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .page-event .article--full-event {
   padding-top: 40px; }
 
-/* line 250, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 258, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .videos-list {
   padding-left: 20px;
   padding-right: 20px;
   position: relative; }
   @media screen and (min-width: 48.062rem) {
-    /* line 250, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 258, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .videos-list {
       max-width: 90%;
       margin-left: auto;
@@ -420,7 +428,7 @@
         content: "";
         display: table; } }
   @media screen and (min-width: 76.25rem) {
-    /* line 250, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 258, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .videos-list {
       max-width: 73.75rem;
       margin-left: auto;
@@ -431,7 +439,7 @@
         content: "";
         display: table; } }
   @media screen and (min-width: 89.375rem) {
-    /* line 250, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 258, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .videos-list {
       max-width: 86.25rem;
       margin-left: auto;
@@ -441,39 +449,39 @@
         clear: both;
         content: "";
         display: table; } }
-  /* line 265, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 273, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .videos-list ul {
     list-style: none;
     font-size: 0; }
-    /* line 268, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 276, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .videos-list ul li {
       display: inline-block;
       margin: 0 0 20px 0;
       width: 100%; }
       @media screen and (min-width: 48.062rem) {
-        /* line 268, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 276, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .videos-list ul li {
           width: 48%;
           margin: 0 0 2% 2%; }
-          /* line 275, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 283, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .videos-list ul li:nth-child(2n+1) {
             margin-left: 0; } }
-      /* line 279, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 287, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .videos-list ul li h1 {
         display: none; }
 
-/* line 287, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 295, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .events-list h4 {
   margin: 20px 0; }
 
-/* line 292, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 300, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .artists-list, .events-list {
   padding-left: 20px;
   padding-right: 20px;
   position: relative;
   z-index: 50; }
   @media screen and (min-width: 48.062rem) {
-    /* line 292, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 300, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .artists-list, .events-list {
       max-width: 90%;
       margin-left: auto;
@@ -486,7 +494,7 @@
         content: "";
         display: table; } }
   @media screen and (min-width: 76.25rem) {
-    /* line 292, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 300, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .artists-list, .events-list {
       max-width: 73.75rem;
       margin-left: auto;
@@ -497,7 +505,7 @@
         content: "";
         display: table; } }
   @media screen and (min-width: 89.375rem) {
-    /* line 292, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 300, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .artists-list, .events-list {
       max-width: 86.25rem;
       margin-left: auto;
@@ -507,12 +515,12 @@
         clear: both;
         content: "";
         display: table; } }
-  /* line 308, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 316, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .artists-list ul, .events-list ul {
     list-style: none;
     font-size: 0;
     padding: 0; }
-    /* line 312, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 320, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .artists-list ul li, .events-list ul li {
       overflow: hidden;
       font-size: 1rem;
@@ -524,31 +532,31 @@
       margin: 0 0 20px 0;
       width: 100%; }
       @media screen and (min-width: 48.062rem) {
-        /* line 312, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 320, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .artists-list ul li, .events-list ul li {
           width: 48%;
           margin: 0 0 2% 2%; }
-          /* line 325, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 333, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .artists-list ul li:nth-child(2n+1), .events-list ul li:nth-child(2n+1) {
             margin-left: 0; } }
       @media screen and (min-width: 76.25rem) {
-        /* line 312, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 320, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .artists-list ul li, .events-list ul li {
           width: 31.333%; }
-          /* line 331, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 339, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .artists-list ul li:nth-child(2n+1), .events-list ul li:nth-child(2n+1) {
             margin-left: 2%; }
-          /* line 334, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 342, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .artists-list ul li:nth-child(3n+1), .events-list ul li:nth-child(3n+1) {
             margin-left: 0; } }
-      /* line 338, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 346, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .artists-list ul li .artist__banner, .artists-list ul li .event__image, .events-list ul li .artist__banner, .events-list ul li .event__image {
         line-height: 0; }
-        /* line 340, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 348, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .artists-list ul li .artist__banner img, .artists-list ul li .event__image img, .events-list ul li .artist__banner img, .events-list ul li .event__image img {
           display: block;
           width: 100%; }
-      /* line 345, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 353, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .artists-list ul li .event__date, .events-list ul li .event__date {
         background: black;
         color: white;
@@ -556,10 +564,10 @@
         position: absolute;
         width: 100%;
         bottom: 0; }
-      /* line 353, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 361, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .artists-list ul li .wrapper, .events-list ul li .wrapper {
         padding: 0 1.25rem; }
-      /* line 356, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 364, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .artists-list ul li footer, .events-list ul li footer {
         padding: 0.625rem 1.25rem;
         position: absolute;
@@ -570,7 +578,7 @@
         -o-transform: translateX(-12.5rem);
         transform: translateX(-12.5rem);
         display: none; }
-      /* line 363, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 371, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .artists-list ul li:hover, .events-list ul li:hover {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         -webkit-transform: translateY(-0.625rem);
@@ -578,29 +586,29 @@
         -ms-transform: translateY(-0.625rem);
         -o-transform: translateY(-0.625rem);
         transform: translateY(-0.625rem); }
-        /* line 366, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 374, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .artists-list ul li:hover footer, .events-list ul li:hover footer {
           -webkit-transform: translateX(0rem);
           -moz-transform: translateX(0rem);
           -ms-transform: translateX(0rem);
           -o-transform: translateX(0rem);
           transform: translateX(0rem); }
-  /* line 373, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 381, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .artists-list.artists-list .artists__banner, .events-list.artists-list .artists__banner {
     line-height: 0; }
-  /* line 376, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 384, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .artists-list.artists-list h4, .events-list.artists-list h4 {
     margin: 0;
     padding: 1.25rem;
     background: black; }
-    /* line 380, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 388, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .artists-list.artists-list h4 a, .events-list.artists-list h4 a {
       color: #fff;
       text-decoration: none; }
-  /* line 387, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 395, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .artists-list.events-list li, .events-list.events-list li {
     padding-bottom: 2.75rem; }
-  /* line 391, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 399, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .artists-list .faux-www, .events-list .faux-www {
     position: absolute;
     width: 100%;
@@ -610,33 +618,41 @@
     top: 0;
     left: 0; }
 
-/* line 403, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 411, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+.page-artist .article__title {
+  font-size: 2.488rem; }
+
+/* line 414, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .page-artist .field__label {
-  font-size: 1.44rem;
+  font-size: 1.728rem;
   font-weight: bold; }
 
-/* line 408, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 419, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .page-artist .field--type-link .field__items {
   margin: 20px 0; }
-  /* line 410, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 421, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .page-artist .field--type-link .field__items div {
     display: inline-block;
     margin-right: 10px; }
 
-/* line 416, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 427, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+.page-artist .block-views-blockboards-by-artist-block-1__title {
+  display: none; }
+
+/* line 430, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .page-artist .flexslider {
-  margin-bottom: 0;
+  margin: 2.5rem 0;
   border: 0; }
 
-/* line 422, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 436, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .block-chalk-meet-block {
   position: relative;
   margin-top: 5rem; }
-  /* line 425, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 439, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .block-chalk-meet-block .background-video {
     width: 100vw;
     height: 100vh; }
-  /* line 429, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 443, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .block-chalk-meet-block .background-video iframe {
     width: auto;
     height: auto;
@@ -649,7 +665,7 @@
     z-index: 0;
     min-width: 100%;
     min-height: 101%; }
-  /* line 442, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 456, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .block-chalk-meet-block .chalk-meet {
     position: absolute;
     top: 50%;
@@ -659,7 +675,7 @@
     -ms-transform: translateY(-50%) translateX(-50%);
     -o-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%); }
-    /* line 447, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 461, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .block-chalk-meet-block .chalk-meet a {
       display: block;
       padding: 1.25rem 2.5rem;
@@ -674,21 +690,21 @@
       line-height: 36px;
       text-align: center;
       text-decoration: none; }
-    /* line 463, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 477, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .block-chalk-meet-block .chalk-meet span {
       text-transform: none;
       font-weight: 100;
       font-size: 28px;
       display: block; }
 
-/* line 472, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 486, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .site-footer {
   padding: 1.25rem 0 0;
   border-top: 1.25rem solid rgba(1, 1, 1, 0.7);
   background: url(../../images/footer_background.jpg) no-repeat;
   background-size: cover;
   background-position: center -1.25rem; }
-  /* line 478, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 492, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .site-footer .chalk-footer__top {
     max-width: 1180px;
     width: 100%;
@@ -696,85 +712,85 @@
     padding: 180px 0 80px;
     text-align: center; }
     @media screen and (min-width: 48.062rem) {
-      /* line 478, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 492, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .site-footer .chalk-footer__top {
         padding: 180px 0; } }
-    /* line 487, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 501, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__top h2 {
       font-size: 54px;
       color: white;
       font-weight: bold;
       text-transform: uppercase;
       font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
-    /* line 494, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 508, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__top .contact-link, .site-footer .chalk-footer__top .brochure-link {
       padding: 10px 20px;
       color: white;
       text-transform: uppercase;
       font-size: 18px;
       display: inline-block; }
-    /* line 501, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 515, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__top .contact-link {
       background: #ed4933;
       border: 1px solid #ed4933;
       margin-bottom: 20px; }
       @media screen and (min-width: 48.062rem) {
-        /* line 501, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 515, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .site-footer .chalk-footer__top .contact-link {
           margin-right: 20px; } }
-    /* line 509, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 523, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__top .brochure-link {
       background: rgba(1, 1, 1, 0.4);
       border: 1px solid white; }
-  /* line 514, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 528, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .site-footer .chalk-footer__sub {
     background: rgba(1, 1, 1, 0.7);
     text-align: center;
     color: white;
     padding: 10px 0 0; }
-    /* line 519, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 533, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__sub p {
       margin: 0;
       background: black; }
-    /* line 523, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 537, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__sub ul {
       font-size: 0;
       padding: 10px 0 0; }
-      /* line 526, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 540, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
       .site-footer .chalk-footer__sub ul li {
         display: inline-block;
         font-size: 16px;
         margin-left: 20px; }
-        /* line 530, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 544, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .site-footer .chalk-footer__sub ul li:first-child {
           margin-left: 0; }
-        /* line 533, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 547, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
         .site-footer .chalk-footer__sub ul li a {
           display: block;
           width: 30px;
           height: 30px;
           text-indent: -9999px; }
-          /* line 538, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 552, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.facebook {
             background: url(../../images/facebook-icon.png);
             background: url(../../images/facebook-icon.svg);
             background-size: 30px; }
-          /* line 543, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 557, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.ello {
             background: url(../../images/ello-icon.png);
             background: url(../../images/ello-icon.svg);
             background-size: 30px; }
-          /* line 548, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 562, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.pinterest {
             background: url(../../images/pinterest-icon.png);
             background: url(../../images/pinterest-icon.svg);
             background-size: 30px; }
-          /* line 553, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 567, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.instagram {
             background: url(../../images/instagram-icon.png);
             background: url(../../images/instagram-icon.svg);
             background-size: 30px; }
-          /* line 558, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 572, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.youtube {
             background: url(../../images/youtube-icon.png);
             background: url(../../images/youtube-icon.svg);
