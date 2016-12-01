@@ -148,7 +148,7 @@
     content: '';
     height: rem(200);
     width: 150%;
-    background: url(../../images/concrete_background.jpg);
+    background: url(../../images/concrete_background.jpg) no-repeat;
     display: block;
     position: absolute;
     top: 50%;
@@ -430,6 +430,9 @@
   .flexslider {
     margin: rem(40) 0;
     border: 0;
+  }
+  .flex-viewport {
+    margin-top: rem(-150);
   }
 }
 
