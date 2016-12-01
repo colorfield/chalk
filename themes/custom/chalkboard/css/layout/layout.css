@@ -154,7 +154,7 @@
 /* line 55, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .path-frontpage .flexslider {
   margin-bottom: 0;
-  margin-top: -6.25rem; }
+  margin-top: -9.375rem; }
 
 /* line 59, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .path-frontpage .block-system-branding-block {
@@ -288,17 +288,11 @@
 
 /* line 143, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
 .flex-viewport {
-  padding: 6.25rem 0; }
-
-/* line 147, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
-.slides {
   position: relative;
   z-index: 50;
-  -webkit-perspective: 62.5rem;
-  -moz-perspective: 62.5rem;
-  perspective: 62.5rem; }
-  /* line 151, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
-  .slides:before {
+  padding: 9.375rem 0; }
+  /* line 147, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+  .flex-viewport:before {
     content: '';
     height: 12.5rem;
     width: 150%;
@@ -306,13 +300,19 @@
     display: block;
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 50%;
     z-index: 0;
     -webkit-transform: translateY(-50%) translateX(-50%) rotate(-5deg);
     -moz-transform: translateY(-50%) translateX(-50%) rotate(-5deg);
     -ms-transform: translateY(-50%) translateX(-50%) rotate(-5deg);
     -o-transform: translateY(-50%) translateX(-50%) rotate(-5deg);
     transform: translateY(-50%) translateX(-50%) rotate(-5deg); }
+
+/* line 161, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
+.slides {
+  -webkit-perspective: 62.5rem;
+  -moz-perspective: 62.5rem;
+  perspective: 62.5rem; }
   /* line 163, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/chalkboard/sass/layout/_page.scss */
   .slides li {
     position: relative;
