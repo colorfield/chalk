@@ -50,3 +50,9 @@ modules/contrib/devel
 
 # Ignore OS generated files
 .DS_Store
+
+# Node stuff
+######################
+.grunt
+npm-debug.log
+node_modules
