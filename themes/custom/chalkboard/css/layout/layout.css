@@ -167,7 +167,7 @@
   /* line 65, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
   .path-frontpage .block-system-branding-block img {
     display: block;
-    widows: 100%; }
+    width: 100%; }
     @media screen and (min-width: 48.062rem) {
       /* line 65, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
       .path-frontpage .block-system-branding-block img {
@@ -201,7 +201,7 @@
       position: absolute;
       width: 150%;
       height: 12.5rem;
-      bottom: 60%;
+      bottom: -60%;
       left: 50%;
       background: #8acb88;
       z-index: -10;
