@@ -64,6 +64,7 @@
     }
     img {
       display: block;
+      widows: 100%;
       @include media($b-medium) {
         position: absolute;
         bottom: 0;
@@ -94,7 +95,7 @@
         position: absolute;
         width: 150%;
         height: rem(200);
-        bottom: rem(-120);
+        bottom: 60%;
         left: 50%;
         background: #8acb88;
         z-index: -10;
@@ -149,6 +150,7 @@
     height: rem(200);
     width: 150%;
     background: url(../../images/concrete_background.jpg) no-repeat;
+    background-size: cover;
     display: block;
     position: absolute;
     top: 50%;
