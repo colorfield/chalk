@@ -1,5 +1,0 @@
-name: Chalk display
-type: module
-description: Frontend custom code for Chalk.
-core: 8.x
-package: Custom
