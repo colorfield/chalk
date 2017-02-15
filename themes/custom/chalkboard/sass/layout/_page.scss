@@ -426,6 +426,14 @@
       }
     }
   }
+  .artist__body {
+    @include media($b-medium) {
+      @include columns(2);
+      p {
+        display: inline;
+      }
+    }
+  }
   .block-views-blockboards-by-artist-block-1__title {
     display: none;
   }
@@ -434,7 +442,7 @@
     border: 0;
   }
   .flex-viewport {
-    margin-top: rem(-150);
+    margin-top: 0;
   }
 }
 

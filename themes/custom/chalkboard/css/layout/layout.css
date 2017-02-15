@@ -637,28 +637,38 @@
     display: inline-block;
     margin-right: 10px; }
 
-/* line 429, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+@media screen and (min-width: 48.062rem) {
+  /* line 429, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+  .page-artist .artist__body {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2; }
+    /* line 432, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    .page-artist .artist__body p {
+      display: inline; } }
+
+/* line 437, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
 .page-artist .block-views-blockboards-by-artist-block-1__title {
   display: none; }
 
-/* line 432, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 440, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
 .page-artist .flexslider {
   margin: 2.5rem 0;
   border: 0; }
 
-/* line 436, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 444, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
 .page-artist .flex-viewport {
-  margin-top: -9.375rem; }
+  margin-top: 0; }
 
-/* line 441, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 449, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
 .block-chalk-meet-block {
   position: relative;
   margin-top: 5rem; }
-  /* line 444, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 452, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
   .block-chalk-meet-block .background-video {
     width: 100vw;
     height: 100vh; }
-  /* line 448, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 456, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
   .block-chalk-meet-block .background-video iframe {
     width: auto;
     height: auto;
@@ -671,7 +681,7 @@
     z-index: 0;
     min-width: 100%;
     min-height: 101%; }
-  /* line 461, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 469, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
   .block-chalk-meet-block .chalk-meet {
     position: absolute;
     top: 50%;
@@ -681,7 +691,7 @@
     -ms-transform: translateY(-50%) translateX(-50%);
     -o-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%); }
-    /* line 466, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 474, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
     .block-chalk-meet-block .chalk-meet a {
       display: block;
       padding: 1.25rem 2.5rem;
@@ -696,21 +706,21 @@
       line-height: 36px;
       text-align: center;
       text-decoration: none; }
-    /* line 482, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 490, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
     .block-chalk-meet-block .chalk-meet span {
       text-transform: none;
       font-weight: 100;
       font-size: 28px;
       display: block; }
 
-/* line 491, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+/* line 499, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
 .site-footer {
   padding: 1.25rem 0 0;
   border-top: 1.25rem solid rgba(1, 1, 1, 0.7);
   background: url(../../images/footer_background.jpg) no-repeat;
   background-size: cover;
   background-position: center -1.25rem; }
-  /* line 497, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 505, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
   .site-footer .chalk-footer__top {
     max-width: 1180px;
     width: 100%;
@@ -718,85 +728,85 @@
     padding: 180px 0 80px;
     text-align: center; }
     @media screen and (min-width: 48.062rem) {
-      /* line 497, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 505, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
       .site-footer .chalk-footer__top {
         padding: 180px 0; } }
-    /* line 506, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 514, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__top h2 {
       font-size: 54px;
       color: white;
       font-weight: bold;
       text-transform: uppercase;
       font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
-    /* line 513, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 521, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__top .contact-link, .site-footer .chalk-footer__top .brochure-link {
       padding: 10px 20px;
       color: white;
       text-transform: uppercase;
       font-size: 18px;
       display: inline-block; }
-    /* line 520, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 528, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__top .contact-link {
       background: #ed4933;
       border: 1px solid #ed4933;
       margin-bottom: 20px; }
       @media screen and (min-width: 48.062rem) {
-        /* line 520, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 528, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
         .site-footer .chalk-footer__top .contact-link {
           margin-right: 20px; } }
-    /* line 528, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 536, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__top .brochure-link {
       background: rgba(1, 1, 1, 0.4);
       border: 1px solid white; }
-  /* line 533, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+  /* line 541, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
   .site-footer .chalk-footer__sub {
     background: rgba(1, 1, 1, 0.7);
     text-align: center;
     color: white;
     padding: 10px 0 0; }
-    /* line 538, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 546, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__sub p {
       margin: 0;
       background: black; }
-    /* line 542, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+    /* line 550, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
     .site-footer .chalk-footer__sub ul {
       font-size: 0;
       padding: 10px 0 0; }
-      /* line 545, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+      /* line 553, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
       .site-footer .chalk-footer__sub ul li {
         display: inline-block;
         font-size: 16px;
         margin-left: 20px; }
-        /* line 549, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 557, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
         .site-footer .chalk-footer__sub ul li:first-child {
           margin-left: 0; }
-        /* line 552, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+        /* line 560, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
         .site-footer .chalk-footer__sub ul li a {
           display: block;
           width: 30px;
           height: 30px;
           text-indent: -9999px; }
-          /* line 557, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 565, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.facebook {
             background: url(../../images/facebook-icon.png);
             background: url(../../images/facebook-icon.svg);
             background-size: 30px; }
-          /* line 562, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 570, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.ello {
             background: url(../../images/ello-icon.png);
             background: url(../../images/ello-icon.svg);
             background-size: 30px; }
-          /* line 567, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 575, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.pinterest {
             background: url(../../images/pinterest-icon.png);
             background: url(../../images/pinterest-icon.svg);
             background-size: 30px; }
-          /* line 572, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 580, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.instagram {
             background: url(../../images/instagram-icon.png);
             background: url(../../images/instagram-icon.svg);
             background-size: 30px; }
-          /* line 577, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
+          /* line 585, /Users/baptistemar/Sites/chalk/themes/custom/chalkboard/sass/layout/_page.scss */
           .site-footer .chalk-footer__sub ul li a.youtube {
             background: url(../../images/youtube-icon.png);
             background: url(../../images/youtube-icon.svg);
