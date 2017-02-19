@@ -1,0 +1,58 @@
+overlayshadow.layout.small:
+  label: small
+  mediaQuery: 'all and (min-width: 480px)'
+  weight: 0
+  multipliers:
+    - 1x
+  group: overlayshadow.layout
+overlayshadow.layout.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 769px)'
+  weight: 1
+  multipliers:
+    - 1x
+  group: overlayshadow.layout
+overlayshadow.layout.big:
+  label: big
+  mediaQuery: 'all and (min-width: 1220px)'
+  weight: 2
+  multipliers:
+    - 1x
+  group: overlayshadow.layout
+overlayshadow.layout.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1430px)'
+  weight: 3
+  multipliers:
+    - 1x
+  group: overlayshadow.layout
+
+overlayshadow.image.small:
+  label: small
+  mediaQuery: 'all and (min-width: 480px)'
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+  group: overlayshadow.image
+overlayshadow.image.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 769px)'
+  weight: 1
+  multipliers:
+    - 1x
+  group: overlayshadow.image
+overlayshadow.image.big:
+  label: big
+  mediaQuery: 'all and (min-width: 1220px)'
+  weight: 2
+  multipliers:
+    - 1x
+  group: overlayshadow.image
+overlayshadow.image.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1440px)'
+  weight: 3
+  multipliers:
+    - 1x
+  group: overlayshadow.image

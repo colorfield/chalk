@@ -1,0 +1,22 @@
+// @file
+// Base
+@charset "UTF-8";
+
+// Follow Drupal standard file structure based on SMACSS
+// @see https://www.drupal.org/node/1887922
+
+// Import abstracts
+@import '../abstracts/abstracts';
+
+
+// Css writing start here. "Normalize.css makes browsers render all elements more consistently and in line with modern standards."
+@import 'normalize';
+
+// Html elements
+@import 'html-elements';
+
+// Typography
+@import 'typography';
+
+// Helper classes
+@import 'helper-classes';

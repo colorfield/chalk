@@ -1,0 +1,11 @@
+// Node
+
+.node--unpublished{
+  opacity: .5;
+
+  &:before{
+    @include el(100%, rem(40), inline-block);
+    border-radius: 3px;
+    @include stripes(yellow, $black, -45deg);
+  }
+}

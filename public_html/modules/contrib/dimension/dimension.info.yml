@@ -1,0 +1,13 @@
+name: Dimension
+type: module
+description: Defines dimension field type.
+# core: 8.x
+package: Field types
+dependencies:
+  - field
+
+# Information added by Drupal.org packaging script on 2015-12-27
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'dimension'
+datestamp: 1451240342

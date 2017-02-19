@@ -1,0 +1,490 @@
+// @file
+// Global website pages layout
+
+.page{
+  background-color: $page-color;
+  color: $primary-text-color;
+}
+
+.www-faux-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.site-header {
+  .l-constrain {
+    font-size: 0;
+  }
+  .block-system-branding-block {
+    font-size: $base-font-size;
+    @include span-columns(2 of 12);
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+  }
+  .site-navigation {
+      font-size: $base-font-size;
+      @include span-columns(4 of 12);
+      @include shift(3);
+      @include omega();
+      display: inline-block;
+      float: none;
+      vertical-align: middle;
+      .menu {
+        margin-bottom: 0;
+        font-family: $header-font-family;
+        text-transform: uppercase;
+        font-weight: bold;
+        a {
+          color: $black;
+          &:hover {
+            color: $brand-primary;
+          }
+        }
+      }
+  }
+}
+
+.main-content {
+  margin: rhythm(2) 0;
+}
+
+.path-boards {
+  .main-content {
+    font-size: 0;
+  }
+  .block-system-main-block {
+    font-size: $base-font-family;
+    @include span-columns(8);
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    @include omega();
+  }
+  .page__title {
+    display: none;
+  }
+  .sidebar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+    @include span-columns(4);
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    h2 {
+      padding: rhythm(1) 0 rhythm(2) rhythm(1);
+      position: relative;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: rem(16);
+      letter-spacing: rem(6);
+    }
+  }
+  .artist {
+    margin-bottom: rhythm(1);
+    h1 {
+      margin: 0;
+      font-size: rem(22);
+      line-height: rem(22);
+      display: inline-block;
+      vertical-align: middle;
+      a {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+    .artist__content {
+      margin-left: rhythm(1/2);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+      max-width: rem(34);
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .boards-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    li.board {
+      font-size: $base-font-size;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+      margin-bottom: rhythm(1/2);
+      @include span-columns(4 of 12);
+      @include omega(3n);
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+      h2 {
+        margin: 0;
+        span {
+          font-family: $header-font-family;
+          font-size: rem(16);
+          letter-spacing: rem(6);
+          text-transform: uppercase;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+      footer {
+        padding: $gutter/2 $gutter;
+      }
+    }
+  }
+}
+
+.more-boards {
+  .more-boards__title {
+    font-size: $base-font-size;
+    font-family: $header-font-family;
+    letter-spacing: rem(6);
+    text-transform: uppercase;
+    text-align: center;
+    &:after {
+      content: '';
+      height: rem(50);
+      width: 1px;
+      display: block;
+      margin: rhythm(1) auto;
+      background: $black;
+    }
+  }
+  ul {
+    font-size: 0;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    font-size: $base-font-size;
+    width: (1/3)*100%;
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    padding: rhythm(1) 0;
+    text-align: center;
+    &.all-board {
+      vertical-align: middle;
+      font-size: rem(34);
+      font-weight: bold;
+      padding: 0;
+      position: relative;
+      .icon {
+        width: 14px;
+        margin: 0 auto;
+        font-size: 0;
+        margin-bottom: $gutter/2;
+        .square {
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          margin-right: 2px;
+          margin-bottom: 2px;
+          background: $black;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &.other-board {
+        position: relative;
+        overflow: hidden;
+        background: $brand-primary;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top right, $brand-secondary, $brand-primary);
+          opacity: .6;
+        }
+        &:hover {
+          &:after {
+            opacity: .8;
+          }
+        }
+    }
+    .other-page__label {
+      color: white;
+      font-size: $base-font-size;
+      letter-spacing: rem(6);
+      text-transform: uppercase;
+      position: relative;
+      z-index: 50;
+      display: block;
+      font-family: $header-font-family;
+      opacity: 0;
+      @include transform(translateY(rem(-50)));
+    }
+    &:hover {
+      .other-page__label {
+        opacity: 1;
+        @include transform(translateY(0));
+      }
+    }
+    header a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    img {
+      width: 100%;
+    }
+    h2 {
+      font-size: rem(34);
+      position: relative;
+      z-index: 50;
+      margin: 0;
+      font-family: $base-font-family;
+      font-weight: bold;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    .board__artist {
+      display: none;
+    }
+  }
+}
+
+.path-frontpage {
+  .feed-icon {
+    display: none;
+  }
+  .article--promoted {
+    font-size: 0;
+    .article__content {
+      font-size: $base-font-size;
+      @include span-columns(7);
+      display: inline-block;
+      float: none;
+      vertical-align: middle;
+      h1 {
+        margin-top: 0;
+      }
+      h2 {
+        padding: 0 0 rhythm(1/2) rhythm(3);
+        position: relative;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: rem(16);
+        letter-spacing: rem(6);
+        &:before {
+          content: '';
+          height: 1px;
+          background: $black;
+          @include span-columns(2 of 12);
+          position: absolute;
+          left: rem(-10);
+          bottom: 0;
+        }
+      }
+      p {
+        padding: 0 rhythm(2) rhythm(1/2) rhythm(3);
+      }
+    }
+    .article__picture {
+      font-size: $base-font-size;
+      @include span-columns(5);
+      display: inline-block;
+      float: none;
+      vertical-align: middle;
+      img   {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.page-board {
+  .board--full {
+    font-size: 0;
+    main {
+      margin-top: rhythm(2);
+    }
+  }
+  .content__aside {
+    font-size: 0;
+    @include span-columns(3 of 12);
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    .field__label {
+      @include span-columns(6 of 12);
+      font-size: $base-font-size;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .field {
+      > .field__item {
+        @include span-columns(6 of 12);
+        font-size: rem(18);
+        display: inline-block;
+        vertical-align: top;
+        text-align: right;
+      }
+      > .field__items {
+          @include span-columns(6 of 12);
+          font-size: rem(18);
+          display: inline-block;
+          vertical-align: top;
+          text-align: right;
+      }
+    }
+  }
+  .content__main {
+      font-size: $base-font-size;
+      @include span-columns(8 of 12);
+      @include shift(1);
+      @include omega();
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+      .board__body {
+        columns: 2;
+        column-gap: $gutter;
+        margin-bottom: rhythm(2);
+      }
+      p {
+        margin-top: 0;
+        display: inline;
+        font-size: rem(18);
+      }
+      .board__image-gallery {
+        img {
+          box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+        }
+        .field__item {
+          margin-bottom: rhythm(2);
+        }
+      }
+  }
+  footer {
+    .board__link {
+      margin: rhythm(1) 0 rhythm(3);
+      text-align: center;
+      font-size: $base-font-size;
+      position: relative;
+      @include display-context(block) {
+        @include span-columns(4 of 12);
+        @include shift(4 of 12);
+      }
+      span {
+        display: block;
+        font-size: $base-font-size;
+        text-transform: uppercase;
+        font-family: $header-font-family;
+        &:after {
+          display: block;
+          content: '';
+          width: 220px;
+          height: 55px;
+          background: url('../../images/artsper_logo.png');
+          margin: 0 auto;
+        }
+      }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        font-size: 0;
+      }
+    }
+  }
+  .board__artist {
+    padding: 0 0 rhythm(1/2) rhythm(3);
+    position: relative;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: rem(16);
+    letter-spacing: rem(6);
+    a {
+      font-family: $header-font-family;
+      text-decoration: none;
+      color: $black;
+    }
+    &:before {
+      content: '';
+      height: 1px;
+      background: $black;
+      @include span-columns(2 of 12);
+      position: absolute;
+      left: rem(-10);
+      bottom: 0;
+    }
+  }
+}
+
+.site-footer {
+  text-align: center;
+  padding: rhythm(2) 0 0;
+  background: linear-gradient(to top right, $brand-secondary, $brand-primary);
+  .block-system-branding-block {
+    color: white;
+    font-family: $header-font-family;
+    font-size: rem(16);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: rem(6);
+    padding-bottom: rhythm(2);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .4);
+    p {
+      margin: 0 0 rhythm(1/2);
+    }
+  }
+  .site-logo {
+    @include display-context(block) {
+      @include span-columns(2);
+      @include shift(5);
+      float: none;
+    }
+    img {
+  	  filter: invert(100%);
+    }
+  }
+  .block-footer-links-block {
+    background: white;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      li {
+        font-size: 0;
+        display: inline-block;
+        margin-left: $gutter;
+        font-size: 0;
+        padding: rhythm(1) 0;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $black;
+        &:before {
+          font-size: rem(24);
+        }
+      }
+    }
+  }
+}

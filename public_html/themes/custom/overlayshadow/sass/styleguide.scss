@@ -1,0 +1,34 @@
+// @file
+// Styleguide purpose styles
+@charset "UTF-8";
+
+// Import abstracts
+@import 'abstracts/abstracts';
+
+.main-content{
+  padding-bottom: rhythm(1);
+  padding-top: rhythm(1);
+}
+
+.l-grid__column {
+  border: 1px solid $black;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+// Set colors for styleguide
+$brand-colors: primary $brand-primary,
+              secondary $brand-secondary;
+
+@each $brand-color in $brand-colors {
+  .brand-color-#{nth($brand-color, 1)}{
+    background-color: nth($brand-color, 2);
+  }
+}
+
+.brand-color{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}

@@ -1,0 +1,229 @@
+// Menus
+
+$menu-text-color: $primary-text-color;
+$submenu-bg-color: $gray25;
+$submenu-text-color: $white;
+
+.menu{
+  padding-left: 0;
+  list-style: none;
+}
+
+// Set inline menu for the first level items
+.menu--first-level{
+  @include media($b-medium) {
+    display: table;
+
+    > .menu-item{
+      display: table-cell;
+
+      > .menu-link{
+        display: block;
+        text-decoration: none;
+        padding: rem(5) rem(10);
+      }
+    }
+  }
+
+  // Add bottom arrow for the first element that has a dropdown
+  & > .has-dropdown{
+    & > .menu-link{
+      @include media($b-medium) {
+        white-space: nowrap;
+
+        &:after{
+          @include triangle($link-color, bottom, 8px, 6px);
+          content: '';
+          display: inline-block;
+          margin-left: rem(5);
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+.menu-item--has-child{
+  position: relative;
+}
+
+// Dropdown
+// @todo check accessibility by :hovering, maybe use click and a11y-toggle script
+// but in that case, we cannot follow the .has-dropdown links with return false;
+//
+.dropdown{
+  background-color: $submenu-bg-color;
+  list-style: none;
+  padding: 0;
+
+  @include media($b-medium) {
+    @include transition(top 250ms cubic-bezier(0.34,1.61,0.7,1));
+    border-radius: 3px;
+    left: -9999px;
+    max-width: rem(200);
+    opacity: 0;
+    position: absolute;
+    text-align: left;
+    top: 110%;
+    visibility: hidden;
+    z-index: 9999;
+  }
+
+  // Dropdown links
+  .menu-link{
+    color: $submenu-text-color;
+    display: block;
+    // decouple for eazy overriding on submenus
+    padding-bottom: rhythm(1/3);
+    padding-top: rhythm(1/3);
+    padding-left: $gutter/2;
+    padding-right: rem(30);
+    text-decoration: none;
+
+    &:focus,
+    &:hover{
+      color: darken($submenu-text-color, 25%);
+    }
+
+    @include media($b-medium) {
+      @include text-overflow;
+    }
+  }
+
+  // 1st step deep Dropdown
+  .dropdown{
+    background-color: lighten($submenu-bg-color, 10%);
+
+    @include media($b-medium) {
+      left: -9999px;
+      left: 100%;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      top: 10px;
+      z-index: 9999;
+      @include transition(top 250ms cubic-bezier(0.34,1.61,0.7,1));
+    }
+
+    .menu-link{
+      padding-left: $gutter;
+
+      @include media($b-medium) {
+        padding-left: $gutter/2;
+      }
+    }
+
+    // 2nd step deep Dropdowns
+    .dropdown{
+      background-color: lighten($submenu-bg-color, 20%);
+
+      .menu-link{
+        padding-left: $gutter*2;
+
+        @include media($b-medium) {
+          padding-left: $gutter/2;
+        }
+      }
+    }
+  }
+
+  // Links that shows nested Dropdowns
+  .has-dropdown{
+    & > .menu-link{
+      position: relative;
+
+      &:hover{
+        &:after{
+          @include media($b-medium) {
+            @include transform(translateX(2px));
+          }
+        }
+      }
+
+      @include media($b-medium) {
+        &:after{
+          @include triangle(#808080, bottom, 8px, 6px);
+          content: '';
+          display: block;
+          position: absolute;
+          right: rem(10);
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          @include transition(all 250ms cubic-bezier(0.34,1.61,0.7,1));
+
+          @include media($b-medium) {
+            @include triangle(#808080, right, 6px, 8px);
+          }
+        }
+      }
+    }
+
+    // Show nested Dropdowns
+    // On the right side e.g.
+    @include media($b-medium) {
+      &:hover{
+        & > .dropdown{
+          left: 100%;
+          opacity: 1;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+// Show dropdown when hovering
+.has-dropdown{
+  &:hover{
+    & > .dropdown{
+      @include media($b-medium) {
+        left: 0;
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+// ARIA hidden menu
+// Source: http://edenspiekermann.github.io/a11y-toggle/
+
+.nav-toggle{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+
+  @include media($b-medium) {
+    display: none;
+  }
+}
+
+.collapsible-box {
+  overflow: hidden;
+  opacity: 1;
+  max-height: 80em;
+  visibility: visible;
+  transition: visibility 0s ease, max-height 300ms ease, opacity 300ms ease;
+  transition-delay: 0s;
+
+  @include media($b-medium) {
+    overflow: visible;
+  }
+}
+
+.collapsible-box[aria-hidden='true'] {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 300ms, 0s, 0s;
+
+  @include media($b-medium) {
+    max-height: inherit;
+    opacity: 1;
+    visibility: visible;
+  }
+}

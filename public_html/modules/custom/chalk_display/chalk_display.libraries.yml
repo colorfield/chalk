@@ -1,0 +1,12 @@
+chalk_display:
+  version: VERSION
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/backbone
+
+youtube:
+  version: VERSION
+  js:
+    js/youtube.js: {}

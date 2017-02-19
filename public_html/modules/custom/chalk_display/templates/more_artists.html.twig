@@ -1,0 +1,34 @@
+{#
+/**
+* @file
+* Theme implementation of the More Projects block.
+*
+* @todo review markup, semantic
+* @ingroup themeable
+*/
+#}
+
+<section class="more-artists outer-wrapper">
+  <h2>{{title}}</h2>
+  <ul>
+    {% if previous %}
+    <li class="other-artist other-artist--prev">
+        <span class="other-page__label post-title">{% trans %}Previous artist{% endtrans %}</span>
+        {{ previous }}
+    </li>
+    {% endif %}
+    <li class="other-artist other-artist--all">
+      <div class="other-page__text-wrapper">
+        <i class="other-page__icon"></i>
+        <span class="other-page__title">Back to<br />all artists</span>
+      </div>
+      <a class="www-faux-link" href="/artists" rel="bookmark"></a>
+    </li>
+    {% if next %}
+    <li class="other-artist other-artist--next">
+        <span class="other-page__label post-title">{% trans %}Next artist{% endtrans %}</span>
+        {{ next }}
+    </li>
+    {% endif %}
+  </ul>
+</section>

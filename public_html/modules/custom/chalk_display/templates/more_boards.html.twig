@@ -1,0 +1,39 @@
+{#
+/**
+* @file
+* Theme implementation of the More Projects block.
+*
+* @todo review markup, semantic
+* @ingroup themeable
+*/
+#}
+
+<section class="more-boards outer-wrapper">
+  <h2 class="more-boards__title">Want more?</h2>
+  <ul>
+    {% if previous %}
+    <li class="other-board other-board--prev">
+        <span class="other-page__label post-title">{% trans %}Previous board{% endtrans %}</span>
+        {{ previous }}
+    </li>
+    {% endif %}
+    <li class="all-board">
+      <div class="other-page__text-wrapper">
+        <div class="icon">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <span class="other-page__title">All boards</span>
+      </div>
+      <a class="www-faux-link" href="/boards" rel="bookmark"></a>
+    </li>
+    {% if next %}
+    <li class="other-board other-board--next">
+        <span class="other-page__label post-title">{% trans %}Next board{% endtrans %}</span>
+        {{ next }}
+    </li>
+    {% endif %}
+  </ul>
+</section>

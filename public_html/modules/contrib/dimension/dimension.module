@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains dimension.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dimension_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dimension module.
+    case 'help.page.dimension':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Defines dimension field type.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,992 @@
+@charset "UTF-8";
+/* line 3, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_breadcrumb.scss */
+.breadcrumb {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 0.312rem 0.625rem; }
+  /* line 8, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_breadcrumb.scss */
+  .breadcrumb ol {
+    margin-bottom: 0;
+    list-style: none;
+    padding: 0; }
+  /* line 13, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_breadcrumb.scss */
+  .breadcrumb li {
+    display: inline-block; }
+    /* line 16, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_breadcrumb.scss */
+    .breadcrumb li + li:before {
+      content: '›';
+      color: #10f0ff; }
+  /* line 21, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_breadcrumb.scss */
+  .breadcrumb a {
+    text-decoration: none; }
+
+/* line 6, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_feed-icon.scss */
+.feed-icon:before {
+  background: url(../images/core/feed.svg) no-repeat center;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  margin-right: 0.312rem;
+  vertical-align: middle;
+  width: 16px; }
+
+/* line 6, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_help.scss */
+.icon-help:before {
+  background: url(../images/core/help.png) no-repeat center;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  margin-right: 0.312rem;
+  vertical-align: middle;
+  width: 16px; }
+
+/* line 3, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_mark.scss */
+.mark {
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.694rem;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 10px;
+  padding: 0.188rem 0.438rem;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+/* line 16, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_mark.scss */
+.mark--new {
+  background-color: red; }
+
+/* line 19, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_mark.scss */
+.mark--updated {
+  background-color: overlayshadow; }
+
+/* line 4, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_messages.scss */
+.messages {
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px 1px 1px 8px;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  padding: 0.625rem 10px;
+  position: relative;
+  word-wrap: break-word; }
+  @media print {
+    /* line 4, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_messages.scss */
+    .messages {
+      background-image: none !important;
+      padding-left: 0.625rem; } }
+  /* line 20, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_messages.scss */
+  .messages em {
+    color: #000F10; }
+
+/* line 25, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_messages.scss */
+.messages--status {
+  background-color: #f0f8ed;
+  border-color: #a6d393;
+  border-left-color: #5B9C40;
+  color: #3b662a; }
+
+/* line 32, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_messages.scss */
+.messages--warning {
+  background-color: #faf4f3;
+  border-color: #e6c5c0;
+  border-left-color: #DAAAA3;
+  color: #aa5144; }
+
+/* line 39, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_messages.scss */
+.messages--error {
+  background-color: #fdf5f5;
+  border-color: #f2bdbd;
+  border-left-color: #DE5252;
+  color: #941c1c; }
+
+/* line 46, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_messages.scss */
+.messages__list {
+  margin-bottom: 0; }
+
+/* line 3, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0; }
+
+/* line 12, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+.tabs--primary > .nav__item, .tabs--secondary > .nav__item {
+  display: inline-block;
+  white-space: nowrap; }
+
+/* line 19, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+.tabs--secondary {
+  display: inline-block;
+  line-height: 0; }
+  /* line 20, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+  .tabs--secondary::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 24, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+  .tabs--secondary .nav__item {
+    display: block;
+    float: left;
+    margin: 0; }
+    /* line 29, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+    .tabs--secondary .nav__item + .nav__item a {
+      border-left: none; }
+  /* line 34, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+  .tabs--secondary a {
+    background-color: #f9f9f9;
+    border: 1px solid #cacaca;
+    color: #333;
+    display: block;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0.5rem;
+    text-decoration: none; }
+    /* line 44, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+    .tabs--secondary a:focus, .tabs--secondary a:hover {
+      background-color: #e5e5e5; }
+    /* line 48, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+    .tabs--secondary a:focus {
+      color: #61afcd;
+      outline: 0; }
+  /* line 54, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+  .tabs--secondary .is-active > a {
+    background-color: #61afcd;
+    border-color: #61afcd;
+    color: #fff;
+    cursor: default; }
+  /* line 61, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+  .tabs--secondary > .nav__item:first-child > a {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px; }
+  /* line 67, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+  .tabs--secondary > .nav__item:last-child > a {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px; }
+
+/* line 75, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+.tabs--primary {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem; }
+  /* line 20, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+  .tabs--primary::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 48.062rem) {
+    /* line 75, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+    .tabs--primary {
+      border-bottom: 1px solid #cacaca; } }
+  /* line 84, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+  .tabs--primary .nav__item {
+    display: block;
+    float: left;
+    margin: 0 0.125rem -1px; }
+  /* line 91, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+  .tabs--primary .is-active a {
+    background-color: #fff;
+    border: 1px solid #cacaca;
+    color: #555;
+    cursor: default; }
+    @media screen and (min-width: 48.062rem) {
+      /* line 91, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+      .tabs--primary .is-active a {
+        border-bottom: none; } }
+    /* line 101, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+    .tabs--primary .is-active a:hover {
+      background-color: #fff; }
+  /* line 107, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+  .tabs--primary a {
+    border-radius: 5px;
+    padding: 0.375rem 0.75rem;
+    display: block;
+    text-decoration: none; }
+    @media screen and (min-width: 48.062rem) {
+      /* line 107, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+      .tabs--primary a {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; } }
+    /* line 117, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_nav.scss */
+    .tabs--primary a:hover {
+      background-color: #ececec; }
+
+/* line 4, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_pager.scss */
+.pager {
+  clear: both; }
+
+/* line 8, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_pager.scss */
+.pager__items {
+  padding: 0;
+  list-style: none; }
+
+@media screen and (min-width: 48.062rem) {
+  /* line 13, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_pager.scss */
+  .pager__item {
+    display: inline-block;
+    vertical-align: middle; } }
+
+/* line 19, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_pager.scss */
+.pager__item a {
+  display: block;
+  border-bottom: 2px solid transparent;
+  text-decoration: none; }
+  /* line 24, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_pager.scss */
+  .pager__item a:hover {
+    border-bottom: 2px solid #88c3d9; }
+  @media screen and (min-width: 48.062rem) {
+    /* line 19, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_pager.scss */
+    .pager__item a {
+      padding: 0 0.312rem; } }
+
+/* line 34, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_pager.scss */
+.pager__item.is-active a {
+  border-bottom: 2px solid #88c3d9;
+  color: #88c3d9;
+  text-decoration: none; }
+
+@media print {
+  /* line 4, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_tabs.scss */
+  .tabs--primary {
+    display: none; } }
+
+@media print {
+  /* line 13, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/system/_tabs.scss */
+  .tabs--secondary {
+    display: none; } }
+
+/* line 3, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_branding.scss */
+.site-logo {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle; }
+
+/* line 9, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_branding.scss */
+.site-name {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none; }
+
+/* line 3, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_browsehappy.scss */
+.browsehappy {
+  background-color: #dcfdff;
+  color: #008790;
+  text-align: center;
+  padding: 1rem;
+  margin: 0; }
+
+/* line 3, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_buttons.scss */
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.833rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.438rem 10px 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  background-color: #90f8ff;
+  border: 2px solid #67f5ff;
+  color: #008790; }
+  /* line 218, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/abstracts/_mixins.scss */
+  .button:active {
+    transform: translateY(1px); }
+  /* line 221, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/abstracts/_mixins.scss */
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  /* line 233, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/abstracts/_mixins.scss */
+  .button:visited {
+    color: #008790; }
+  /* line 236, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/abstracts/_mixins.scss */
+  .button:hover {
+    background-color: #67f5ff;
+    color: #008790; }
+  /* line 240, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/abstracts/_mixins.scss */
+  .button:focus {
+    box-shadow: #9bccdf 0 0 5px;
+    color: #008790;
+    outline: 0; }
+
+/* line 7, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_buttons.scss */
+.button--primary {
+  background-color: #61afcd;
+  border: 2px solid #429fc3;
+  color: #fff; }
+  /* line 252, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/abstracts/_mixins.scss */
+  .button--primary:hover {
+    background-color: #429fc3;
+    color: #fff; }
+  /* line 256, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/abstracts/_mixins.scss */
+  .button--primary:focus {
+    box-shadow: #9bccdf 0 0 5px;
+    color: #fff;
+    outline: 0; }
+
+/* line 7, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_field.scss */
+.field__label {
+  font-weight: 600; }
+
+/* line 4, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+.text-format-wrapper > .form-item {
+  margin-bottom: 0; }
+
+/* line 8, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+.filter-wrapper {
+  border-radius: 3px;
+  border-top: 0;
+  border: 1px solid #90f8ff;
+  margin: 0;
+  overflow: hidden;
+  padding: 0.75rem 20px; }
+  /* line 16, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+  .filter-wrapper .form-item {
+    margin: 0; }
+    /* line 19, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+    .filter-wrapper .form-item label {
+      display: inline; }
+
+/* line 25, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+.filter-help {
+  float: right; }
+
+/* line 30, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+.filter-guidelines .filter-guidelines-item {
+  margin-top: 1.5rem; }
+
+/* line 36, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+.filter-help p {
+  margin: 0; }
+
+/* line 39, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+.filter-help a {
+  position: relative;
+  margin: 0 20px 0 0; }
+  /* line 43, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+  .filter-help a:after {
+    background: transparent url(../images/core/help.png);
+    content: '';
+    display: block;
+    height: 16px;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 16px; }
+
+/* line 58, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+.text-format-wrapper .description {
+  margin-top: 0.75rem; }
+
+/* line 63, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_filter.admin.scss */
+.tips {
+  font-size: 0.833rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  padding-left: 0; }
+
+/* line 3, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-item {
+  margin: 1.5rem 0; }
+  /* line 6, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+  .form-item .form-item {
+    margin-top: 0; }
+
+/* line 11, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-item__label {
+  display: block;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 0.5rem; }
+  /* line 17, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+  .form-type-checkbox .form-item__label,
+  .form-type-radio .form-item__label {
+    display: inline;
+    font-weight: normal; }
+
+/* line 24, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-required {
+  position: relative; }
+  /* line 27, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+  .form-required:after {
+    content: '*';
+    color: red; }
+
+/* line 33, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+fieldset:not(.fieldgroup) {
+  border-radius: 3px;
+  border: 1px solid #90f8ff;
+  margin: 0.75rem 0 1.5rem;
+  padding: 3rem 20px 0.75rem;
+  position: relative; }
+
+/* line 41, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.fieldset-legend {
+  color: #555;
+  text-transform: uppercase;
+  font-size: 0.833rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  position: absolute;
+  top: 0.75rem; }
+
+/* line 51, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.fieldgroup {
+  border: 0;
+  margin: 1.5rem 0;
+  padding: 2.25rem 0 0;
+  position: relative; }
+
+/* line 58, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-item__description {
+  color: #555;
+  font-size: 0.833rem;
+  line-height: 1.3;
+  margin-top: 0.5rem; }
+
+/* line 70, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-checkboxes .form-type-checkbox,
+.form-radios .form-type-radio {
+  margin: 0; }
+
+/* line 82, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-date,
+.form-email,
+.form-password,
+.form-text,
+.form-textarea {
+  background-color: #fff;
+  border: 1px solid #90f8ff;
+  border-radius: 3px;
+  box-shadow: inset rgba(0, 15, 16, 0.15) 1px 1px 1px;
+  color: #333;
+  font-size: 0.833rem;
+  line-height: 1;
+  padding: 0.417rem 0.625rem;
+  width: 100%; }
+  @media screen and (min-width: 30rem) {
+    /* line 82, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+    .form-date,
+    .form-email,
+    .form-password,
+    .form-text,
+    .form-textarea {
+      width: auto; } }
+  /* line 101, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+  .form-date:focus,
+  .form-email:focus,
+  .form-password:focus,
+  .form-text:focus,
+  .form-textarea:focus {
+    border-color: #43f3ff;
+    border-color: #43f3ff;
+    box-shadow: inset rgba(0, 15, 16, 0.15) 1px 2px 2px;
+    color: #1a1a1a;
+    outline: 0; }
+
+/* line 110, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-textarea {
+  line-height: 1.5;
+  resize: vertical; }
+
+/* line 115, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-search {
+  border: 1px solid #90f8ff;
+  border-radius: 20px;
+  box-shadow: inset rgba(0, 15, 16, 0.15) 1px 1px 1px;
+  color: #333;
+  line-height: 1;
+  padding: 0.5rem 1rem; }
+  /* line 123, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+  .form-search:focus {
+    border-color: #43f3ff;
+    color: #1a1a1a;
+    outline: 0; }
+
+/* line 130, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+.form-select {
+  background-color: #fff;
+  border: 1px solid #90f8ff;
+  border-radius: 3px;
+  color: #333;
+  font-size: 0.833rem;
+  line-height: 1;
+  width: 100%;
+  white-space: nowrap; }
+  /* line 140, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+  .form-select:focus {
+    box-shadow: #9bccdf 0 0 5px;
+    outline: 0; }
+  @media screen and (min-width: 30rem) {
+    /* line 130, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form-item.scss */
+    .form-select {
+      width: auto; } }
+
+/* line 5, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form.scss */
+.js-text-format-wrapper > .form-item-text-format-value {
+  margin-bottom: 0; }
+  /* line 9, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form.scss */
+  .js-text-format-wrapper > .form-item-text-format-value > div {
+    line-height: 0; }
+
+/* line 14, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form.scss */
+.js-text-format-wrapper .filter-wrapper {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0; }
+
+/* line 19, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form.scss */
+.js-text-format-wrapper textarea {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 100%; }
+
+/* line 26, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form.scss */
+.filter-help,
+.filter-guidelines {
+  font-size: 0.833rem; }
+
+/* line 34, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form.scss */
+details {
+  border-radius: 3px;
+  border: 1px solid #90f8ff;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0.75rem 20px;
+  position: relative; }
+
+/* line 42, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form.scss */
+.detail__summary {
+  cursor: pointer;
+  outline: none; }
+
+/* line 47, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_form.scss */
+.detail__description {
+  font-style: italic;
+  margin-top: 0; }
+
+/* line 7, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+.menu {
+  padding-left: 0;
+  list-style: none; }
+
+@media screen and (min-width: 48.062rem) {
+  /* line 13, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+  .menu--first-level {
+    display: table; }
+    /* line 17, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .menu--first-level > .menu-item {
+      display: table-cell; }
+      /* line 20, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+      .menu--first-level > .menu-item > .menu-link {
+        display: block;
+        text-decoration: none;
+        padding: 0.312rem 0.625rem; } }
+
+@media screen and (min-width: 48.062rem) {
+  /* line 30, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+  .menu--first-level > .has-dropdown > .menu-link {
+    white-space: nowrap; }
+    /* line 34, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .menu--first-level > .has-dropdown > .menu-link:after {
+      border-style: solid;
+      height: 0;
+      width: 0;
+      border-color: #61afcd transparent transparent transparent;
+      border-width: 6px 4px 0 4px;
+      content: '';
+      display: inline-block;
+      margin-left: 0.312rem;
+      vertical-align: middle; } }
+
+/* line 46, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+.menu-item--has-child {
+  position: relative; }
+
+/* line 54, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+.dropdown {
+  background-color: #008790;
+  list-style: none;
+  padding: 0; }
+  @media screen and (min-width: 48.062rem) {
+    /* line 54, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .dropdown {
+      -webkit-transition: top 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+      -moz-transition: top 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+      transition: top 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+      border-radius: 3px;
+      left: -9999px;
+      max-width: 12.5rem;
+      opacity: 0;
+      position: absolute;
+      text-align: left;
+      top: 110%;
+      visibility: hidden;
+      z-index: 9999; } }
+  /* line 73, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+  .dropdown .menu-link {
+    color: #fff;
+    display: block;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 10px;
+    padding-right: 1.875rem;
+    text-decoration: none; }
+    /* line 83, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .dropdown .menu-link:focus, .dropdown .menu-link:hover {
+      color: #bfbfbf; }
+    @media screen and (min-width: 48.062rem) {
+      /* line 73, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+      .dropdown .menu-link {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; } }
+  /* line 94, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+  .dropdown .dropdown {
+    background-color: #00b6c3; }
+    @media screen and (min-width: 48.062rem) {
+      /* line 94, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+      .dropdown .dropdown {
+        left: -9999px;
+        left: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        top: 10px;
+        z-index: 9999;
+        -webkit-transition: top 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        -moz-transition: top 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        transition: top 250ms cubic-bezier(0.34, 1.61, 0.7, 1); } }
+    /* line 108, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .dropdown .dropdown .menu-link {
+      padding-left: 20px; }
+      @media screen and (min-width: 48.062rem) {
+        /* line 108, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+        .dropdown .dropdown .menu-link {
+          padding-left: 10px; } }
+    /* line 117, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .dropdown .dropdown .dropdown {
+      background-color: #00e6f6; }
+      /* line 120, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+      .dropdown .dropdown .dropdown .menu-link {
+        padding-left: 40px; }
+        @media screen and (min-width: 48.062rem) {
+          /* line 120, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+          .dropdown .dropdown .dropdown .menu-link {
+            padding-left: 10px; } }
+  /* line 132, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+  .dropdown .has-dropdown > .menu-link {
+    position: relative; }
+    @media screen and (min-width: 48.062rem) {
+      /* line 136, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+      .dropdown .has-dropdown > .menu-link:hover:after {
+        -webkit-transform: translateX(2px);
+        -moz-transform: translateX(2px);
+        -ms-transform: translateX(2px);
+        -o-transform: translateX(2px);
+        transform: translateX(2px); } }
+    @media screen and (min-width: 48.062rem) {
+      /* line 144, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+      .dropdown .has-dropdown > .menu-link:after {
+        border-style: solid;
+        height: 0;
+        width: 0;
+        border-color: #808080 transparent transparent transparent;
+        border-width: 6px 4px 0 4px;
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0.625rem;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transition: all 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        -moz-transition: all 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        transition: all 250ms cubic-bezier(0.34, 1.61, 0.7, 1); } }
+  @media screen and (min-width: 48.062rem) and (min-width: 48.062rem) {
+    /* line 144, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .dropdown .has-dropdown > .menu-link:after {
+      border-style: solid;
+      height: 0;
+      width: 0;
+      border-color: transparent transparent transparent #808080;
+      border-width: 4px 0 4px 6px; } }
+  @media screen and (min-width: 48.062rem) {
+    /* line 166, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .dropdown .has-dropdown:hover > .dropdown {
+      left: 100%;
+      opacity: 1;
+      top: 0; } }
+
+@media screen and (min-width: 48.062rem) {
+  /* line 179, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+  .has-dropdown:hover > .dropdown {
+    left: 0;
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+    z-index: 10; } }
+
+/* line 194, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+.nav-toggle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none; }
+  @media screen and (min-width: 48.062rem) {
+    /* line 194, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .nav-toggle {
+      display: none; } }
+
+/* line 205, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+.collapsible-box {
+  overflow: hidden;
+  opacity: 1;
+  max-height: 80em;
+  visibility: visible;
+  transition: visibility 0s ease, max-height 300ms ease, opacity 300ms ease;
+  transition-delay: 0s; }
+  @media screen and (min-width: 48.062rem) {
+    /* line 205, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .collapsible-box {
+      overflow: visible; } }
+
+/* line 218, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+.collapsible-box[aria-hidden='true'] {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 300ms, 0s, 0s; }
+  @media screen and (min-width: 48.062rem) {
+    /* line 218, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_menus.scss */
+    .collapsible-box[aria-hidden='true'] {
+      max-height: inherit;
+      opacity: 1;
+      visibility: visible; } }
+
+/* line 7, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_progress-bar.scss */
+.progress {
+  margin-bottom: 1.5rem;
+  position: relative; }
+
+/* line 12, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_progress-bar.scss */
+.progress__track {
+  background-image: -webkit-linear-gradient(top, #dcfdff 0%, #dcfdff 100%);
+  background-image: linear-gradient(to bottom, #dcfdff 0%, #dcfdff 100%);
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 135, 144, 0.2), inset 0 -1px 0 rgba(0, 135, 144, 0.05);
+  height: 1rem;
+  margin-bottom: 0.375rem;
+  max-width: 100%;
+  min-width: 6rem;
+  overflow: hidden; }
+
+/* line 30, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_progress-bar.scss */
+.progress__bar {
+  background-image: -webkit-linear-gradient(left, #88c3d9 0%, #3c9abf 100%);
+  background-image: linear-gradient(to right, #88c3d9 0%, #3c9abf 100%);
+  border-radius: 1rem;
+  -webkit-transition: width 0.5s ease-out;
+  -moz-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+  background-color: #9bccdf;
+  height: 1rem;
+  width: 3%; }
+
+/* line 45, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_progress-bar.scss */
+.progress__description,
+.progress__percentage {
+  font-size: 0.694rem;
+  color: #555;
+  overflow: hidden; }
+
+/* line 52, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_progress-bar.scss */
+.progress__description {
+  float: left; }
+
+/* line 56, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_progress-bar.scss */
+.progress__percentage {
+  float: right; }
+
+/* line 61, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_progress-bar.scss */
+.progress--small .progress__track {
+  height: 0.5rem; }
+
+/* line 65, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_progress-bar.scss */
+.progress--small .progress__bar {
+  height: 0.5rem; }
+
+/* line 18, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+table {
+  border-collapse: collapse;
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  overflow-x: scroll;
+  width: 100%; }
+  /* line 26, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+  table caption {
+    font-weight: 500;
+    margin-bottom: 0.75rem; }
+
+/* line 32, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+thead {
+  text-align: left; }
+
+/* line 36, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+.sticky-header thead {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  display: block;
+  width: 100%; }
+
+/* line 45, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+tbody tr {
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  cursor: ew-resize; }
+  /* line 51, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+  tbody tr:first-child {
+    border-top: 1px solid #e6e6e6; }
+
+/* line 55, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+tbody td + td {
+  border-left: 1px solid #e6e6e6; }
+
+/* line 60, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+th, td {
+  word-break: break-word;
+  padding: 0.5rem;
+  vertical-align: top; }
+
+/* line 66, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+th {
+  font-size: 0.833rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+@media screen and (min-width: 48.062rem) {
+  /* line 74, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+  table {
+    display: table;
+    table-layout: fixed; }
+  /* line 78, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+  thead {
+    display: table-row-group;
+    float: none; }
+  /* line 82, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+  tbody {
+    display: table-row-group;
+    overflow-x: auto;
+    white-space: normal;
+    width: auto; }
+    /* line 88, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+    tbody tr {
+      display: table-row;
+      cursor: auto; }
+  /* line 93, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_table.scss */
+  th, td {
+    border-right: none;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top; } }
+
+/* line 4, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+.vertical-tabs {
+  border: 1px solid #90f8ff;
+  margin: 1em 0 1em 15em;
+  border-radius: 3px; }
+
+/* line 10, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+.vertical-tabs__menu {
+  float: left;
+  list-style: none;
+  margin: -1px 0 -1px -15em;
+  padding: 0;
+  width: 15em; }
+
+/* line 18, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+.vertical-tabs__pane {
+  background-color: #fff;
+  border: 0;
+  margin: 0;
+  padding: 1.5rem 20px 1px; }
+  /* line 24, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+  .vertical-tabs__pane > summary {
+    display: none; }
+
+/* line 30, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+.vertical-tabs__menu-item {
+  border: 1px solid transparent;
+  font-size: 0.833rem; }
+  /* line 34, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+  .vertical-tabs__menu-item a {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    display: block;
+    padding: 0.75rem 20px;
+    text-decoration: none; }
+    /* line 44, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+    .vertical-tabs__menu-item a:focus .vertical-tabs__menu-item-title, .vertical-tabs__menu-item a:active .vertical-tabs__menu-item-title, .vertical-tabs__menu-item a:hover .vertical-tabs__menu-item-title {
+      text-decoration: none; }
+    /* line 48, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+    .vertical-tabs__menu-item a:focus {
+      outline: 1px dotted; }
+    /* line 51, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+    .vertical-tabs__menu-item a:hover {
+      background-color: #ececec; }
+  /* line 56, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+  .vertical-tabs__menu-item.is-selected {
+    border: 1px solid #90f8ff;
+    border-right-width: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px; }
+    /* line 62, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+    .vertical-tabs__menu-item.is-selected a {
+      background-color: #fff; }
+      /* line 65, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+      .vertical-tabs__menu-item.is-selected a:hover {
+        background-color: #fff; }
+    /* line 70, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+    .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-item-title {
+      color: #008790; }
+
+/* line 76, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/global/_vertical-tabs.scss */
+.vertical-tabs__menu-item-summary {
+  display: block;
+  margin-bottom: 0;
+  line-height: normal; }
+
+/* line 3, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/content/_node.scss */
+.node--unpublished {
+  opacity: .5; }
+  /* line 6, /Users/bIDISTE/Sites/chalk/public_html/themes/custom/overlayshadow/sass/components/content/_node.scss */
+  .node--unpublished:before {
+    content: '';
+    display: block;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 3px;
+    background: repeating-linear-gradient(-45deg, yellow, yellow 10px, #000F10 10px, #000F10 20px); }

@@ -1,0 +1,7 @@
+name: Chalk Display
+type: module
+description: Front-end general purpose custom code.
+core: 8.x
+package: Chalk
+dependencies:
+  - block

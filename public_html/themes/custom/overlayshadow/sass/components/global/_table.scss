@@ -1,0 +1,99 @@
+// Tables
+//
+
+// Colors
+
+$table-headerbg: #ddd;
+$table-headerbg-odd: #efefef;
+$table-headerbg-hover:#ddd;
+
+$table-rowbg:#fafafa;
+$table-rowbg-hover:#f4f4f4;
+$table-row-odd:#ffffff;
+$table-row-odd-hover:#f4f4f4;
+
+$table-row-border-color: #e6e6e6;
+$table-cell-border-color: #f4f4f4;
+
+table {
+  border-collapse: collapse;
+  display: block;
+  margin-bottom: rhythm(1);
+  padding: 0;
+  overflow-x: scroll;
+  width:100%;
+
+  caption{
+    font-weight: 500;
+    margin-bottom: rhythm(1/2);
+  }
+}
+
+thead {
+  text-align: left;
+}
+  .sticky-header{
+    thead{
+      background-color: $white;
+      border: 1px solid $table-row-border-color;
+      display: block;
+      width: 100%;
+    }
+  }
+
+tbody {
+  tr{
+    border-bottom: 1px solid $table-row-border-color;
+    border-left: 1px solid $table-row-border-color;
+    border-right: 1px solid $table-row-border-color;
+    cursor: ew-resize;
+
+    &:first-child{
+      border-top: 1px solid $table-row-border-color;
+    }
+  }
+  td+td{
+    border-left: 1px solid #e6e6e6;
+  }
+}
+
+th,td{
+  word-break: break-word;
+  padding: rem(8px);
+  vertical-align: top;
+}
+
+th {
+  font-size: $font-size-md;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+// Display table as a normal one, thead above
+@include media($b-medium) {
+  table{
+    display: table;
+    table-layout: fixed;
+  }
+  thead{
+    display: table-row-group;
+    float: none;
+  }
+  tbody{
+    display: table-row-group;
+    overflow-x: auto;
+    white-space: normal;
+    width: auto;
+
+    & tr{
+      display: table-row;
+      cursor: auto;
+    }
+  }
+  th,td{
+    border-right: none;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+  }
+}
