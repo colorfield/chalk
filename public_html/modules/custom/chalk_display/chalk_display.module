@@ -19,21 +19,27 @@
  */
 function chalk_display_theme($existing, $type, $theme, $path) {
   return array(
-      'chalk_display_more_boards' => array(
-          'variables' => array(
-              'title' => null,
-              'previous' => null,
-              'next' => null,
-          ),
-          'template' => 'more_boards',
+    'chalk_display_more_boards' => array(
+      'variables' => array(
+        'title' => null,
+        'previous' => null,
+        'next' => null,
       ),
-      'chalk_display_more_artists' => array(
-          'variables' => array(
-              'title' => null,
-              'previous' => null,
-              'next' => null,
-          ),
-          'template' => 'more_artists',
+      'template' => 'more_boards',
+    ),
+    'chalk_display_more_artists' => array(
+      'variables' => array(
+        'title' => null,
+        'previous' => null,
+        'next' => null,
       ),
+      'template' => 'more_artists',
+    ),
+    'chalk_display_hero' => array(
+      'variables' => array(
+        'video' => null,
+      ),
+      'template' => 'hero',
+    ),
   );
 }

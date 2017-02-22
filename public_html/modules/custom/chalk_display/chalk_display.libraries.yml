@@ -1,12 +1,25 @@
-chalk_display:
-  version: VERSION
-  dependencies:
-    - core/jquery
-    - core/jquery.once
-    - core/drupal
-    - core/backbone
+# chalk_display:
+#   version: VERSION
+#   dependencies:
+#     - core/jquery
+#     - core/jquery.once
+#     - core/drupal
+#     - core/backbone
 
-youtube:
+hero:
   version: VERSION
   js:
-    js/youtube.js: {}
+    js/bower_components/three.js/build/three.js: {}
+    js/bower_components/aquarelle/Aquarelle.js: {}
+    js/bower_components/three.js/examples/js/postprocessing/EffectComposer.js: {}
+    js/bower_components/three.js/examples/js/postprocessing/ClearPass.js: {}
+    js/bower_components/aquarelle/AquarellePass.js: {}
+    js/bower_components/three.js/examples/js/postprocessing/ShaderPass.js: {}
+    js/bower_components/three.js/examples/js/shaders/CopyShader.js: {}
+    //bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js: { type: external }
+    js/aquarelleScript.js: {}
+
+# youtube:
+#   version: VERSION
+#   js:
+#     js/youtube.js: {}
