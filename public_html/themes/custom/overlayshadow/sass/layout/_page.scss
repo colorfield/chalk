@@ -90,9 +90,10 @@
       top: 50%;
   }
 }
-
-.main-content {
-  margin: rhythm(2) 0;
+.path-boards, .page-artist, .page-board, .path-events, .page-event {
+  .main-content {
+    margin: rhythm(4) 0;
+  }
 }
 
 .path-boards {
