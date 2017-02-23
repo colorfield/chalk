@@ -38,6 +38,7 @@ function chalk_display_theme($existing, $type, $theme, $path) {
     'chalk_display_hero' => array(
       'variables' => array(
         'video' => null,
+        'aquarelle' => null,
       ),
       'template' => 'hero',
     ),
