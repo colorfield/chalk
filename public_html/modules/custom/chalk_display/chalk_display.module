@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Drupal Module: Tilt Display.
+ * Drupal Module: Chalk Display.
  *
  * Implements theme hook.
  *
@@ -19,6 +19,13 @@
  */
 function chalk_display_theme($existing, $type, $theme, $path) {
   return array(
+    'chalk_display_social_links' => array(
+      'variables' => array(
+        'title' => null,
+        'social_links' => null,
+      ),
+      'template' => 'social_links',
+    ),
     'chalk_display_more_boards' => array(
       'variables' => array(
         'title' => null,

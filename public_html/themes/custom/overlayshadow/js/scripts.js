@@ -40,7 +40,7 @@ Drupal.behaviors.myBehavior = {
 (function ($) {
   Drupal.behaviors.theme = {
     attach: function (context, settings) {
-      $('.block-footer-links-block').footerReveal();
+      $('.site-footer .block-social-links-block').footerReveal();
     }
   };
 })(jQuery);

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\chalk_display\Plugin\Block\FooterLinksBlock.
+ * Contains \Drupal\chalk_display\Plugin\Block\SocialLinksBlock.
  */
 
 namespace Drupal\chalk_display\Plugin\Block;
@@ -12,15 +12,14 @@ use Drupal\Core\Url;
 use Drupal\Core\Link;
 
 /**
- * Provides a 'FooterLinksBlock' block.
+ * Provides a 'SocialLinksBlock' block.
  *
  * @Block(
- *  id = "footer_links_block",
- *  admin_label = @Translation("Footer links block"),
+ *  id = "social_links_block",
+ *  admin_label = @Translation("Social links block"),
  * )
  */
-class FooterLinksBlock extends BlockBase {
-
+class SocialLinksBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
@@ -45,22 +44,22 @@ class FooterLinksBlock extends BlockBase {
     $link['#attributes'] = array('class' => array('fa fa-facebook'));
     $items[] = render($link);
 
-    // twitter link
-    $url = Url::fromUri('https://twitter.com/TiltFactory');
+    // ello link
+    $url = Url::fromUri('https://ello.co/chalk_collective');
     $link = Link::fromTextAndUrl(t('Ello'), $url);
     $link = $link->toRenderable();
     $link['#attributes'] = array('class' => array('fa fa-circle'));
     $items[] = render($link);
 
-    // twitter link
-    $url = Url::fromUri('https://twitter.com/TiltFactory');
+    // Pinterest link
+    $url = Url::fromUri('https://www.pinterest.com/chalkcustom/');
     $link = Link::fromTextAndUrl(t('Pinterest'), $url);
     $link = $link->toRenderable();
     $link['#attributes'] = array('class' => array('fa fa-pinterest'));
     $items[] = render($link);
 
-    // twitter link
-    $url = Url::fromUri('https://twitter.com/TiltFactory');
+    // Youtube link
+    $url = Url::fromUri('https://www.youtube.com/channel/UCkzRQhwlf39InmYu8WsRRRA');
     $link = Link::fromTextAndUrl(t('Youtube'), $url);
     $link = $link->toRenderable();
     $link['#attributes'] = array('class' => array('fa fa-youtube-square'));
@@ -72,7 +71,13 @@ class FooterLinksBlock extends BlockBase {
         '#type' => 'ul',
     );
 
-    $build['footer_links_block']['#markup'] = render($render_array);
+    $output = [
+      '#theme' => 'chalk_display_social_links',
+      '#title' => t('Social links'),
+      '#social_links'=> $render_array,
+    ];
+
+    $build['social_links']['#markup'] = render($output);
 
     return $build;
   }
